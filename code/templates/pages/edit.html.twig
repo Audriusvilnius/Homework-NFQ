@@ -2,41 +2,32 @@
 
 {% block main %}
     <main>
-     <div class="py-5 bg-light">
+     <div class="py-5">
         <div class="container">
         <form  method="post" enctype="multipart/form-data">
                 <div class="card mt-2" style="max-width: 1wm;">
                     <div class="row g-0 shadow p-3 bg-body-tertiary rounded">
-                        <div class="col-md-4">
+
+                        <div class="col-md-8">
                             <div class="card-body">
-                                <h6>Title: </h6>
-                                <h6>Additional info: </h6>
+                                <h6 class="card-title">Title: </h6>
                                 <input type="text" class="form-control" name="food_add" value="{{article.title}}">
+                                <h6 class="card-title mt-3">Text:</h6>
+                                <textarea class="form-control" placeholder="Food description leave a comment here" name="food_des" rows="13" cols="30" value="{{article.text}}">{{article.text}}</textarea>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card-body">
-                                <h6 class="card-title">Description:</h6>
-                                <textarea class="form-control" placeholder="Food description leave a comment here" name="food_des" rows="11" cols="30" value="{{article.text}}">{{ article.text}}</textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card-body">
-                                <h6>Photo change:</h6>
-                                 <img class="img-fluid" src="{{ article.image }}" alt="image">
+                                <h6 class="card-title">Photo change:</h6>
+                                <img class="img-fluid rounded" src="{{ article.image }}" alt="image">
                                 <input type="file" class="form-control mt-3" name="photo">
                             </div>
-                        </div>
-                        <div class="col-md-12 ">
-                            <div class="card-body">
-                                <div class="list-table__buttons ">
+                                <div class="list-table__buttons d-flex d-grid gap-2 d-sm-flex justify-content-sm-center mt-5">
                                     <button type="submit" class="btn btn-danger" name="delete_photo" value="1">Delete photo</button>
-                                    <button type="submit" class="btn btn-primary d-flex align-content-end m-2 " style="width: 80px;" name="save">Update</button>
+                                    <button type="submit" class="btn btn-primary d-flex align-content-end px-4 gap-3"  name="save">Update</button>
+                                    <a href="{{ path('home') }}" type="button" class="btn btn-secondary">Back</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                            <a href="{{ path('home') }}" type="button" class="btn btn-secondary btn-lg px-4 gap-3">Back</a>
                         </div>
                     </div>
                 </div>

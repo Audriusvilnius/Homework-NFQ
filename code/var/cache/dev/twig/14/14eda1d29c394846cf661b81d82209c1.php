@@ -57,55 +57,46 @@ class __TwigTemplate_f503735da36c5a4c8c98c25ed6f7f580 extends Template
 
         // line 4
         echo "    <main>
-     <div class=\"py-5 bg-light\">
+     <div class=\"py-5\">
         <div class=\"container\">
         <form  method=\"post\" enctype=\"multipart/form-data\">
                 <div class=\"card mt-2\" style=\"max-width: 1wm;\">
                     <div class=\"row g-0 shadow p-3 bg-body-tertiary rounded\">
-                        <div class=\"col-md-4\">
+
+                        <div class=\"col-md-8\">
                             <div class=\"card-body\">
-                                <h6>Title: </h6>
-                                <h6>Additional info: </h6>
+                                <h6 class=\"card-title\">Title: </h6>
                                 <input type=\"text\" class=\"form-control\" name=\"food_add\" value=\"";
         // line 14
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 14, $this->source); })()), "title", [], "any", false, false, false, 14), "html", null, true);
         echo "\">
-                            </div>
-                        </div>
-                        <div class=\"col-md-4\">
-                            <div class=\"card-body\">
-                                <h6 class=\"card-title\">Description:</h6>
-                                <textarea class=\"form-control\" placeholder=\"Food description leave a comment here\" name=\"food_des\" rows=\"11\" cols=\"30\" value=\"";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 20, $this->source); })()), "text", [], "any", false, false, false, 20), "html", null, true);
+                                <h6 class=\"card-title mt-3\">Text:</h6>
+                                <textarea class=\"form-control\" placeholder=\"Food description leave a comment here\" name=\"food_des\" rows=\"13\" cols=\"30\" value=\"";
+        // line 16
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "text", [], "any", false, false, false, 16), "html", null, true);
         echo "\">";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 20, $this->source); })()), "text", [], "any", false, false, false, 20), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "text", [], "any", false, false, false, 16), "html", null, true);
         echo "</textarea>
                             </div>
                         </div>
                         <div class=\"col-md-4\">
                             <div class=\"card-body\">
-                                <h6>Photo change:</h6>
-                                 <img class=\"img-fluid\" src=\"";
-        // line 26
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 26, $this->source); })()), "image", [], "any", false, false, false, 26), "html", null, true);
+                                <h6 class=\"card-title\">Photo change:</h6>
+                                <img class=\"img-fluid rounded\" src=\"";
+        // line 22
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 22, $this->source); })()), "image", [], "any", false, false, false, 22), "html", null, true);
         echo "\" alt=\"image\">
                                 <input type=\"file\" class=\"form-control mt-3\" name=\"photo\">
                             </div>
-                        </div>
-                        <div class=\"col-md-12 \">
-                            <div class=\"card-body\">
-                                <div class=\"list-table__buttons \">
+                                <div class=\"list-table__buttons d-flex d-grid gap-2 d-sm-flex justify-content-sm-center mt-5\">
                                     <button type=\"submit\" class=\"btn btn-danger\" name=\"delete_photo\" value=\"1\">Delete photo</button>
-                                    <button type=\"submit\" class=\"btn btn-primary d-flex align-content-end m-2 \" style=\"width: 80px;\" name=\"save\">Update</button>
+                                    <button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\"  name=\"save\">Update</button>
+                                    <a href=\"";
+        // line 28
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo "\" type=\"button\" class=\"btn btn-secondary\">Back</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class=\"d-grid gap-2 d-sm-flex justify-content-sm-center\">
-                            <a href=\"";
-        // line 39
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\" type=\"button\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Back</a>
                         </div>
                     </div>
                 </div>
@@ -131,7 +122,7 @@ class __TwigTemplate_f503735da36c5a4c8c98c25ed6f7f580 extends Template
 
     public function getDebugInfo()
     {
-        return array (  107 => 39,  91 => 26,  80 => 20,  71 => 14,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  96 => 28,  87 => 22,  76 => 16,  71 => 14,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -140,41 +131,32 @@ class __TwigTemplate_f503735da36c5a4c8c98c25ed6f7f580 extends Template
 
 {% block main %}
     <main>
-     <div class=\"py-5 bg-light\">
+     <div class=\"py-5\">
         <div class=\"container\">
         <form  method=\"post\" enctype=\"multipart/form-data\">
                 <div class=\"card mt-2\" style=\"max-width: 1wm;\">
                     <div class=\"row g-0 shadow p-3 bg-body-tertiary rounded\">
-                        <div class=\"col-md-4\">
+
+                        <div class=\"col-md-8\">
                             <div class=\"card-body\">
-                                <h6>Title: </h6>
-                                <h6>Additional info: </h6>
+                                <h6 class=\"card-title\">Title: </h6>
                                 <input type=\"text\" class=\"form-control\" name=\"food_add\" value=\"{{article.title}}\">
+                                <h6 class=\"card-title mt-3\">Text:</h6>
+                                <textarea class=\"form-control\" placeholder=\"Food description leave a comment here\" name=\"food_des\" rows=\"13\" cols=\"30\" value=\"{{article.text}}\">{{article.text}}</textarea>
                             </div>
                         </div>
                         <div class=\"col-md-4\">
                             <div class=\"card-body\">
-                                <h6 class=\"card-title\">Description:</h6>
-                                <textarea class=\"form-control\" placeholder=\"Food description leave a comment here\" name=\"food_des\" rows=\"11\" cols=\"30\" value=\"{{article.text}}\">{{ article.text}}</textarea>
-                            </div>
-                        </div>
-                        <div class=\"col-md-4\">
-                            <div class=\"card-body\">
-                                <h6>Photo change:</h6>
-                                 <img class=\"img-fluid\" src=\"{{ article.image }}\" alt=\"image\">
+                                <h6 class=\"card-title\">Photo change:</h6>
+                                <img class=\"img-fluid rounded\" src=\"{{ article.image }}\" alt=\"image\">
                                 <input type=\"file\" class=\"form-control mt-3\" name=\"photo\">
                             </div>
-                        </div>
-                        <div class=\"col-md-12 \">
-                            <div class=\"card-body\">
-                                <div class=\"list-table__buttons \">
+                                <div class=\"list-table__buttons d-flex d-grid gap-2 d-sm-flex justify-content-sm-center mt-5\">
                                     <button type=\"submit\" class=\"btn btn-danger\" name=\"delete_photo\" value=\"1\">Delete photo</button>
-                                    <button type=\"submit\" class=\"btn btn-primary d-flex align-content-end m-2 \" style=\"width: 80px;\" name=\"save\">Update</button>
+                                    <button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\"  name=\"save\">Update</button>
+                                    <a href=\"{{ path('home') }}\" type=\"button\" class=\"btn btn-secondary\">Back</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class=\"d-grid gap-2 d-sm-flex justify-content-sm-center\">
-                            <a href=\"{{ path('home') }}\" type=\"button\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Back</a>
                         </div>
                     </div>
                 </div>
