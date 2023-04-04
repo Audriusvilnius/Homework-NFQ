@@ -1,5 +1,6 @@
 {
     "require": {
-        "twbs/bootstrap-icons": "^1.10"
+        "twbs/bootstrap-icons": "^1.10",
+        "symfony/form": "^6.2"
     }
 }

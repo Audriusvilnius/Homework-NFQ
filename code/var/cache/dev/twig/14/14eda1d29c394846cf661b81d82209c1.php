@@ -64,14 +64,14 @@ class __TwigTemplate_f503735da36c5a4c8c98c25ed6f7f580 extends Template
 \t\t\t\t\t\t<div class=\"row g-0 shadow p-3 bg-body-tertiary rounded\">
 \t\t\t\t\t\t\t<div class=\"col-md-8\">
 \t\t\t\t\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Title:
-\t\t\t\t\t\t\t\t\t</h6>
-\t\t\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" name=\"food_add\" value=\"";
-        // line 14
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 14, $this->source); })()), "title", [], "any", false, false, false, 14), "html", null, true);
-        echo "\">
+\t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Title:</h6>
+\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"title_add\" value=\"";
+        // line 13
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 13, $this->source); })()), "title", [], "any", false, false, false, 13), "html", null, true);
+        echo "\" class=\"form-control\" placeholder=\"Title leave a here...\">
+
 \t\t\t\t\t\t\t\t\t<h6 class=\"card-title mt-3\">Text:</h6>
-\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" placeholder=\"Food description leave a comment here\" name=\"food_des\" rows=\"11\" cols=\"30\" value=\"";
+\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" placeholder=\"Blog description leave a here...\" name=\"text_des\" rows=\"11\" cols=\"30\" value=\"";
         // line 16
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "text", [], "any", false, false, false, 16), "html", null, true);
         echo "\">";
@@ -127,7 +127,7 @@ class __TwigTemplate_f503735da36c5a4c8c98c25ed6f7f580 extends Template
 
     public function getDebugInfo()
     {
-        return array (  102 => 34,  94 => 29,  76 => 16,  71 => 14,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  102 => 34,  94 => 29,  76 => 16,  70 => 13,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -143,11 +143,11 @@ class __TwigTemplate_f503735da36c5a4c8c98c25ed6f7f580 extends Template
 \t\t\t\t\t\t<div class=\"row g-0 shadow p-3 bg-body-tertiary rounded\">
 \t\t\t\t\t\t\t<div class=\"col-md-8\">
 \t\t\t\t\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Title:
-\t\t\t\t\t\t\t\t\t</h6>
-\t\t\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" name=\"food_add\" value=\"{{article.title}}\">
+\t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Title:</h6>
+\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"title_add\" value=\"{{article.title}}\" class=\"form-control\" placeholder=\"Title leave a here...\">
+
 \t\t\t\t\t\t\t\t\t<h6 class=\"card-title mt-3\">Text:</h6>
-\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" placeholder=\"Food description leave a comment here\" name=\"food_des\" rows=\"11\" cols=\"30\" value=\"{{article.text}}\">{{article.text}}</textarea>
+\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" placeholder=\"Blog description leave a here...\" name=\"text_des\" rows=\"11\" cols=\"30\" value=\"{{article.text}}\">{{article.text}}</textarea>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"col-md-4\">

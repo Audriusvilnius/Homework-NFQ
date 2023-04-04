@@ -47,7 +47,7 @@ class AppFixtures extends Fixture
         ];
 
         yield [
-            'name' => "World's First Holographic Smartphone",
+            'name' => 'World\'s First Holographic Smartphone',
             'img' => 'https://images.unsplash.com/photo-1570101945621-945409a6370f',
             'text' => file_get_contents(__DIR__ . '/Articles/article_4.txt'),
         ];
