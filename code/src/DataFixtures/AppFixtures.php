@@ -32,7 +32,7 @@ class AppFixtures extends Fixture
             'name' => 'AI Transforms Recycling Industry',
             'img' => 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b',
             'text' => file_get_contents(__DIR__ . '/Articles/article_1.txt'),
-            ];
+        ];
 
         yield [
             'name' => 'Teleportation Breakthrough',

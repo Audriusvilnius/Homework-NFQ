@@ -56,55 +56,60 @@ class __TwigTemplate_f503735da36c5a4c8c98c25ed6f7f580 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
         // line 4
-        echo "    <main>
-     <div class=\"py-5\">
-        <div class=\"container\">
-        <form  method=\"post\" enctype=\"multipart/form-data\">
-                <div class=\"card mt-2\" style=\"max-width: 1wm;\">
-                    <div class=\"row g-0 shadow p-3 bg-body-tertiary rounded\">
-
-                        <div class=\"col-md-8\">
-                            <div class=\"card-body\">
-                                <h6 class=\"card-title\">Title: </h6>
-                                <input type=\"text\" class=\"form-control\" name=\"food_add\" value=\"";
+        echo "\t<main>
+\t\t<div class=\"py-5\">
+\t\t\t<div class=\"container\">
+\t\t\t\t<form method=\"post\" enctype=\"multipart/form-data\">
+\t\t\t\t\t<div class=\"card mt-2\" style=\"max-width: 1wm;\">
+\t\t\t\t\t\t<div class=\"row g-0 shadow p-3 bg-body-tertiary rounded\">
+\t\t\t\t\t\t\t<div class=\"col-md-8\">
+\t\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Title:
+\t\t\t\t\t\t\t\t\t</h6>
+\t\t\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" name=\"food_add\" value=\"";
         // line 14
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 14, $this->source); })()), "title", [], "any", false, false, false, 14), "html", null, true);
         echo "\">
-                                <h6 class=\"card-title mt-3\">Text:</h6>
-                                <textarea class=\"form-control\" placeholder=\"Food description leave a comment here\" name=\"food_des\" rows=\"13\" cols=\"30\" value=\"";
+\t\t\t\t\t\t\t\t\t<h6 class=\"card-title mt-3\">Text:</h6>
+\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" placeholder=\"Food description leave a comment here\" name=\"food_des\" rows=\"11\" cols=\"30\" value=\"";
         // line 16
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "text", [], "any", false, false, false, 16), "html", null, true);
         echo "\">";
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "text", [], "any", false, false, false, 16), "html", null, true);
         echo "</textarea>
-                            </div>
-                        </div>
-                        <div class=\"col-md-4\">
-                            <div class=\"card-body\">
-                                <h6 class=\"card-title\">Photo change:</h6>
-                                <img class=\"img-fluid rounded\" src=\"";
-        // line 22
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 22, $this->source); })()), "image", [], "any", false, false, false, 22), "html", null, true);
-        echo "\" alt=\"image\">
-                                <input type=\"file\" class=\"form-control mt-3\" name=\"photo\">
-                            </div>
-                                <div class=\"list-table__buttons d-flex d-grid gap-2 d-sm-flex justify-content-sm-center mt-5\">
-                                    <button type=\"submit\" class=\"btn btn-danger\" name=\"delete_photo\" value=\"1\">Delete photo</button>
-                                    <button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\"  name=\"save\">Update</button>
-                                    <a href=\"";
-        // line 28
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Photo change:</h6>
+\t\t\t\t\t\t\t\t\t<div class=\"position-relative\">
+\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-sm position-absolute top-0 start-100 translate-middle\" name=\"delete_photo\" value=\"1\">
+\t\t\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" fill=\"currentColor\" class=\"bi bi-x-circle bg-danger rounded-5\" viewbox=\"0 0 16 16\">
+\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/>
+\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z\"/>
+\t\t\t\t\t\t\t\t\t\t\t</svg>
+\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t<img class=\"img-fluid rounded\" src=\"";
+        // line 29
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 29, $this->source); })()), "image", [], "any", false, false, false, 29), "html", null, true);
+        echo "\" alt=\"image\"></div>
+\t\t\t\t\t\t\t\t\t<input type=\"file\" class=\"form-control mt-3\" name=\"photo\">
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3\">
+\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\" name=\"save\">Update</button>
+\t\t\t\t\t\t\t\t\t<a href=\"";
+        // line 34
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\" type=\"button\" class=\"btn btn-secondary\">Back</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-        </div>
-    </main>
-";
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</form>
+\t</div>
+</main>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -122,7 +127,7 @@ class __TwigTemplate_f503735da36c5a4c8c98c25ed6f7f580 extends Template
 
     public function getDebugInfo()
     {
-        return array (  96 => 28,  87 => 22,  76 => 16,  71 => 14,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  102 => 34,  94 => 29,  76 => 16,  71 => 14,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -130,41 +135,46 @@ class __TwigTemplate_f503735da36c5a4c8c98c25ed6f7f580 extends Template
         return new Source("{% extends 'base.html.twig' %}
 
 {% block main %}
-    <main>
-     <div class=\"py-5\">
-        <div class=\"container\">
-        <form  method=\"post\" enctype=\"multipart/form-data\">
-                <div class=\"card mt-2\" style=\"max-width: 1wm;\">
-                    <div class=\"row g-0 shadow p-3 bg-body-tertiary rounded\">
-
-                        <div class=\"col-md-8\">
-                            <div class=\"card-body\">
-                                <h6 class=\"card-title\">Title: </h6>
-                                <input type=\"text\" class=\"form-control\" name=\"food_add\" value=\"{{article.title}}\">
-                                <h6 class=\"card-title mt-3\">Text:</h6>
-                                <textarea class=\"form-control\" placeholder=\"Food description leave a comment here\" name=\"food_des\" rows=\"13\" cols=\"30\" value=\"{{article.text}}\">{{article.text}}</textarea>
-                            </div>
-                        </div>
-                        <div class=\"col-md-4\">
-                            <div class=\"card-body\">
-                                <h6 class=\"card-title\">Photo change:</h6>
-                                <img class=\"img-fluid rounded\" src=\"{{ article.image }}\" alt=\"image\">
-                                <input type=\"file\" class=\"form-control mt-3\" name=\"photo\">
-                            </div>
-                                <div class=\"list-table__buttons d-flex d-grid gap-2 d-sm-flex justify-content-sm-center mt-5\">
-                                    <button type=\"submit\" class=\"btn btn-danger\" name=\"delete_photo\" value=\"1\">Delete photo</button>
-                                    <button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\"  name=\"save\">Update</button>
-                                    <a href=\"{{ path('home') }}\" type=\"button\" class=\"btn btn-secondary\">Back</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-        </div>
-    </main>
-{% endblock %}
+\t<main>
+\t\t<div class=\"py-5\">
+\t\t\t<div class=\"container\">
+\t\t\t\t<form method=\"post\" enctype=\"multipart/form-data\">
+\t\t\t\t\t<div class=\"card mt-2\" style=\"max-width: 1wm;\">
+\t\t\t\t\t\t<div class=\"row g-0 shadow p-3 bg-body-tertiary rounded\">
+\t\t\t\t\t\t\t<div class=\"col-md-8\">
+\t\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Title:
+\t\t\t\t\t\t\t\t\t</h6>
+\t\t\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" name=\"food_add\" value=\"{{article.title}}\">
+\t\t\t\t\t\t\t\t\t<h6 class=\"card-title mt-3\">Text:</h6>
+\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" placeholder=\"Food description leave a comment here\" name=\"food_des\" rows=\"11\" cols=\"30\" value=\"{{article.text}}\">{{article.text}}</textarea>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Photo change:</h6>
+\t\t\t\t\t\t\t\t\t<div class=\"position-relative\">
+\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-sm position-absolute top-0 start-100 translate-middle\" name=\"delete_photo\" value=\"1\">
+\t\t\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" fill=\"currentColor\" class=\"bi bi-x-circle bg-danger rounded-5\" viewbox=\"0 0 16 16\">
+\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/>
+\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z\"/>
+\t\t\t\t\t\t\t\t\t\t\t</svg>
+\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t<img class=\"img-fluid rounded\" src=\"{{ article.image }}\" alt=\"image\"></div>
+\t\t\t\t\t\t\t\t\t<input type=\"file\" class=\"form-control mt-3\" name=\"photo\">
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3\">
+\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\" name=\"save\">Update</button>
+\t\t\t\t\t\t\t\t\t<a href=\"{{ path('home') }}\" type=\"button\" class=\"btn btn-secondary\">Back</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</form>
+\t</div>
+</main>{% endblock %}
 ", "pages/edit.html.twig", "/code/templates/pages/edit.html.twig");
     }
 }
