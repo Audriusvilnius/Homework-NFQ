@@ -65,7 +65,10 @@ class __TwigTemplate_202434ae7b692e88afdb2387e5d22433 extends Template
         // line 14
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_view", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 14, $this->source); })()), "id", [], "any", false, false, false, 14)]), "html", null, true);
         echo "\" class=\"btn btn-sm btn-outline-secondary\">View</a>
-                <a href=\"#\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
+                <a href=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_view", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 15, $this->source); })()), "id", [], "any", false, false, false, 15)]), "html", null, true);
+        echo "\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
             </div>
 
             <small class=\"text-muted\">
@@ -92,7 +95,7 @@ class __TwigTemplate_202434ae7b692e88afdb2387e5d22433 extends Template
 
     public function getDebugInfo()
     {
-        return array (  66 => 14,  57 => 9,  55 => 8,  49 => 5,  44 => 3,  40 => 1,);
+        return array (  70 => 15,  66 => 14,  57 => 9,  55 => 8,  49 => 5,  44 => 3,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -111,7 +114,7 @@ class __TwigTemplate_202434ae7b692e88afdb2387e5d22433 extends Template
         <div class=\"d-flex justify-content-between align-items-center\">
             <div class=\"btn-group\">
                 <a href=\"{{ path('article_view', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary\">View</a>
-                <a href=\"#\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
+                <a href=\"{{ path('article_view', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
             </div>
 
             <small class=\"text-muted\">
