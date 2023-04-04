@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <main>
+        <div class="py-5 bg-light">
+            <div class="container">
+                <div class="py-5 text-center">
+                    <h1 class="fw-bold">{{ article.title }}</h1>
+                    <p class="text-muted">X minutes</p>
+                </div>
+
+                <img class="img-fluid" src="{{ article.image }}" alt="">
+
+                <div class="lead mb-4 py-5">{{ article.text | raw }}</div>
+
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a href="{{ path('home') }}" type="button" class="btn btn-secondary btn-lg px-4 gap-3">Back</a>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

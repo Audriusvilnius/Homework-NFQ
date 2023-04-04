@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  nginx:
+    container_name: nginx
+    build: docker/nginx
+    volumes:
+      - ./code:/code
+    ports:
+      - 127.0.0.1:8000:80
+
+  php:
+    container_name: php
+    build: docker/php
+    volumes:
+      - ./code:/code
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.42.42/24
