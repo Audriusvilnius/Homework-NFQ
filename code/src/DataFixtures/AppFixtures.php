@@ -57,5 +57,11 @@ class AppFixtures extends Fixture
             'img' => 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2',
             'text' => file_get_contents(__DIR__ . '/Articles/article_5.txt'),
         ];
+                
+        yield [
+            'name' => 'Ocean Cleanup Project Succeeds',
+            'img' => 'https://images.unsplash.com/photo-1484291470158-b8f8d608850d',
+            'text' => file_get_contents(__DIR__ . '/Articles/article_6.txt'),
+        ];
     }
 }
