@@ -50,7 +50,7 @@ class __TwigTemplate_a302f1c23e9be3d87fca376719528cda extends Template
 \t\t<h1 class=\"card-title\">";
         // line 5
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 5, $this->source); })()), "updateAt", [], "any", false, false, false, 5), "html", null, true);
-        echo "3</h1>
+        echo "</h1>
 
 
 \t\t<p class=\"card-text\">
@@ -108,7 +108,7 @@ class __TwigTemplate_a302f1c23e9be3d87fca376719528cda extends Template
 \t<img src=\"{{ article.image }}\" class=\"card-img-top\">
 \t<div class=\"card-body\">
 \t\t<h5 class=\"card-title\">{{ article.title }}</h5>
-\t\t<h1 class=\"card-title\">{{ article.updateAt }}3</h1>
+\t\t<h1 class=\"card-title\">{{ article.updateAt }}</h1>
 
 
 \t\t<p class=\"card-text\">
