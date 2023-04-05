@@ -47,9 +47,11 @@ class __TwigTemplate_a302f1c23e9be3d87fca376719528cda extends Template
         // line 4
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 4, $this->source); })()), "title", [], "any", false, false, false, 4), "html", null, true);
         echo "</h5>
-\t\t";
-        // line 6
-        echo "
+\t\t<h1 class=\"card-title\">";
+        // line 5
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 5, $this->source); })()), "updateAt", [], "any", false, false, false, 5), "html", null, true);
+        echo "3</h1>
+
 
 \t\t<p class=\"card-text\">
 \t\t\t";
@@ -97,7 +99,7 @@ class __TwigTemplate_a302f1c23e9be3d87fca376719528cda extends Template
 
     public function getDebugInfo()
     {
-        return array (  72 => 16,  68 => 15,  59 => 10,  57 => 9,  52 => 6,  48 => 4,  43 => 2,  40 => 1,);
+        return array (  74 => 16,  70 => 15,  61 => 10,  59 => 9,  52 => 5,  48 => 4,  43 => 2,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -106,7 +108,7 @@ class __TwigTemplate_a302f1c23e9be3d87fca376719528cda extends Template
 \t<img src=\"{{ article.image }}\" class=\"card-img-top\">
 \t<div class=\"card-body\">
 \t\t<h5 class=\"card-title\">{{ article.title }}</h5>
-\t\t{# <h5 class=\"card-title\">{{ article.updated_at }}</h5> #}
+\t\t<h1 class=\"card-title\">{{ article.updateAt }}3</h1>
 
 
 \t\t<p class=\"card-text\">

@@ -23,8 +23,8 @@ class Article
     #[ORM\Column(length: 255)]
     private ?string $image = null;
 
-    // #[ORM\Column(type: Types::BIGINT)]
-    // private ?string $upda = null;
+    #[ORM\Column(type: Types::BIGINT, nullable: true)]
+    private ?string $updateAt = null;
 
     public function getId(): ?int
     {
@@ -67,14 +67,14 @@ class Article
         return $this;
     }
 
-    public function getUpda(): ?string
+    public function getUpdateAt(): ?string
     {
-        return $this->upda;
+        return $this->updateAt;
     }
 
-    public function setUpda(string $upda): self
+    public function setUpdateAt(?string $updateAt): self
     {
-        $this->upda = $upda;
+        $this->updateAt = $updateAt;
 
         return $this;
     }
