@@ -23,60 +23,60 @@ class Article
     #[ORM\Column(length: 255)]
     private ?string $image = null;
 
-    /**
-     * @return int|null
-     */
+    // #[ORM\Column(type: Types::BIGINT)]
+    // private ?string $upda = null;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
-    /**
-     * @param string|null $title
-     */
-    public function setTitle(?string $title): void
+    public function setTitle(string $title): self
     {
         $this->title = $title;
+
+        return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getText(): ?string
     {
         return $this->text;
     }
 
-    /**
-     * @param string|null $text
-     */
-    public function setText(?string $text): void
+    public function setText(string $text): self
     {
         $this->text = $text;
+
+        return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getImage(): ?string
     {
         return $this->image;
     }
 
-    /**
-     * @param string|null $image
-     */
-    public function setImage(?string $image): void
+    public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getUpda(): ?string
+    {
+        return $this->upda;
+    }
+
+    public function setUpda(string $upda): self
+    {
+        $this->upda = $upda;
+
+        return $this;
     }
 
 }
