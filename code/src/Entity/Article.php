@@ -23,6 +23,10 @@ class Article
     #[ORM\Column(length: 255)]
     private ?string $image = null;
 
+    // #[ORM\Column(type: Types::TEXT)]
+    // private ?string $updated_at= null;
+ 
+
     /**
      * @return int|null
      */
@@ -77,5 +81,20 @@ class Article
     public function setImage(?string $image): void
     {
         $this->image = $image;
+    }
+    /**
+     * @return string|null
+     */
+    public function getUpdated_at(): ?string
+    {
+        return $this->updated_at;
+    }
+
+    /**
+     * @param string|null $updated_at
+     */
+    public function setUpdated_at(?string $updated_at): void
+    {
+        $this->time = $updated_at;
     }
 }
