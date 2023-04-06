@@ -56,43 +56,61 @@ class __TwigTemplate_67e98168cdc15e2a601760e45aec524a extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello FormController!";
+        echo "Hello FormController!
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
     }
 
-    // line 5
+    // line 6
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        // line 7
+        echo "\t<style>
+\t\t.example-wrapper {
+\t\t\tmargin: 1em auto;
+\t\t\tmax-width: 800px;
+\t\t\twidth: 95%;
+\t\t\tfont: 18px / 1.5 sans-serif;
+\t\t}
+\t\t.example-wrapper code {
+\t\t\tbackground: #F5F5F5;
+\t\t\tpadding: 2px 6px;
+\t\t}
+\t</style>
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
+\t<div class=\"example-wrapper\">
+\t\t<h1>Hello
+\t\t\t";
+        // line 22
+        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 22, $this->source); })()), "html", null, true);
         echo "! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
+\t\tThis friendly message is coming from:
+\t\t<ul>
+\t\t\t<li>Your controller at
+\t\t\t\t<code>
+\t\t\t\t\t<a href=\"";
+        // line 28
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/Applications/XAMPP/xamppfiles/htdocs/homework-main/code/src/Controller/FormController.php", 0), "html", null, true);
-        echo "\">src/Controller/FormController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
+        echo "\">src/Controller/FormController.php</a>
+\t\t\t\t</code>
+\t\t\t</li>
+\t\t\t<li>Your template at
+\t\t\t\t<code>
+\t\t\t\t\t<a href=\"";
+        // line 33
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/Applications/XAMPP/xamppfiles/htdocs/homework-main/code/templates/form/index.html.twig", 0), "html", null, true);
-        echo "\">templates/form/index.html.twig</a></code></li>
-    </ul>
-</div>
+        echo "\">templates/form/index.html.twig</a>
+\t\t\t\t</code>
+\t\t\t</li>
+\t\t</ul>
+\t</div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -111,30 +129,48 @@ class __TwigTemplate_67e98168cdc15e2a601760e45aec524a extends Template
 
     public function getDebugInfo()
     {
-        return array (  92 => 17,  88 => 16,  81 => 12,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  108 => 33,  100 => 28,  91 => 22,  74 => 7,  67 => 6,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello FormController!{% endblock %}
+{% block title %}Hello FormController!
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+\t<style>
+\t\t.example-wrapper {
+\t\t\tmargin: 1em auto;
+\t\t\tmax-width: 800px;
+\t\t\twidth: 95%;
+\t\t\tfont: 18px / 1.5 sans-serif;
+\t\t}
+\t\t.example-wrapper code {
+\t\t\tbackground: #F5F5F5;
+\t\t\tpadding: 2px 6px;
+\t\t}
+\t</style>
 
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+\t<div class=\"example-wrapper\">
+\t\t<h1>Hello
+\t\t\t{{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ '/Applications/XAMPP/xamppfiles/htdocs/homework-main/code/src/Controller/FormController.php'|file_link(0) }}\">src/Controller/FormController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ '/Applications/XAMPP/xamppfiles/htdocs/homework-main/code/templates/form/index.html.twig'|file_link(0) }}\">templates/form/index.html.twig</a></code></li>
-    </ul>
-</div>
+\t\tThis friendly message is coming from:
+\t\t<ul>
+\t\t\t<li>Your controller at
+\t\t\t\t<code>
+\t\t\t\t\t<a href=\"{{ '/Applications/XAMPP/xamppfiles/htdocs/homework-main/code/src/Controller/FormController.php'|file_link(0) }}\">src/Controller/FormController.php</a>
+\t\t\t\t</code>
+\t\t\t</li>
+\t\t\t<li>Your template at
+\t\t\t\t<code>
+\t\t\t\t\t<a href=\"{{ '/Applications/XAMPP/xamppfiles/htdocs/homework-main/code/templates/form/index.html.twig'|file_link(0) }}\">templates/form/index.html.twig</a>
+\t\t\t\t</code>
+\t\t\t</li>
+\t\t</ul>
+\t</div>
 {% endblock %}
 ", "form/index.html.twig", "/code/templates/form/index.html.twig");
     }

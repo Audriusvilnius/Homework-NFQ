@@ -13,17 +13,15 @@ return [
     ],
     [ // $regexpList
         0 => '{^(?'
-                .'|/article/(?'
-                    .'|edit/([^/]++)(*:32)'
-                    .'|([^/]++)(*:47)'
-                .')'
-                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:83)'
+                .'|/form/edit/([^/]++)(*:26)'
+                .'|/article/([^/]++)(*:50)'
+                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:85)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
-        32 => [[['_route' => 'article_edit', '_controller' => 'App\\Controller\\EditController::edit'], ['id'], null, null, false, true, null]],
-        47 => [[['_route' => 'article_view', '_controller' => 'App\\Controller\\ViewController::view'], ['id'], null, null, false, true, null]],
-        83 => [
+        26 => [[['_route' => 'form_edit', '_controller' => 'App\\Controller\\FormController::edit'], ['id'], null, null, false, true, null]],
+        50 => [[['_route' => 'article_view', '_controller' => 'App\\Controller\\ViewController::view'], ['id'], null, null, false, true, null]],
+        85 => [
             [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
