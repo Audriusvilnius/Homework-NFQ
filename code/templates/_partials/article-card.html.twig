@@ -2,8 +2,6 @@
 	<img src="{{ article.image }}" class="card-img-top">
 	<div class="card-body">
 		<h5 class="card-title">{{ article.title }}</h5>
-		<h1 class="card-title">{{ article.updateAt }}</h1>
-
 
 		<p class="card-text">
 			{% set cutoff = 80 %}
@@ -17,7 +15,9 @@
 			</div>
 
 			<small class="text-muted">
-				X mins
+				{{ article.mins }}
+				mins
+				<h6 class="card-title">{{ article.updateAt }}</h6>
 			</small>
 		</div>
 	</div>

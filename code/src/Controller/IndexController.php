@@ -14,6 +14,7 @@ class IndexController extends AbstractController
     public function list(ArticleRepository $articleRepository): Response
     {
         $articles=$articleRepository->findBy(array(), array('updateAt' => 'ASC'));
+    
         return $this->render('pages/index.html.twig', [
             'articles' => $articles,
         ]);
