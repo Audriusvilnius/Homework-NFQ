@@ -24,8 +24,7 @@ class AppFixtures extends Fixture
 
         $manager->flush();
     }
-
-
+    
     /**
      * @return iterable<array>
      */
@@ -52,7 +51,7 @@ class AppFixtures extends Fixture
             'img' => 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8',
             'text' => file_get_contents(__DIR__ . '/Articles/article_3.txt'),
             'upda' => time()-rand(1,1000),
-                'mins' => 0,
+            'mins' => 0,
         ];
 
         yield [
@@ -60,15 +59,15 @@ class AppFixtures extends Fixture
             'img' => 'https://images.unsplash.com/photo-1570101945621-945409a6370f',
             'text' => file_get_contents(__DIR__ . '/Articles/article_4.txt'),
             'upda' => time()-rand(1,1000),
-                'mins' => 0,
+            'mins' => 0,
         ];
 
         yield [
             'name' => 'Self-Driving Cars Reduce Traffic Fatalities',
             'img' => 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2',
             'text' => file_get_contents(__DIR__ . '/Articles/article_5.txt'),
-           'upda' => time()-rand(1,1000),
-               'mins' => 0,
+            'upda' => time()-rand(1,1000),
+            'mins' => 0,
         ];
                 
         yield [
@@ -76,7 +75,7 @@ class AppFixtures extends Fixture
             'img' => 'https://images.unsplash.com/photo-1484291470158-b8f8d608850d',
             'text' => file_get_contents(__DIR__ . '/Articles/article_6.txt'),
             'upda' => time()-rand(1,1000),
-                'mins' => 0,
+            'mins' => 0,
         ];
     }
 }

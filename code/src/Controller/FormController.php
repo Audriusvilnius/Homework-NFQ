@@ -17,7 +17,8 @@ class FormController extends AbstractController
             'controller_name' => 'FormController',
         ]);
     }
-        #[Route('/form/edit/{id}', name: 'form_edit')]
+
+    #[Route('/form/edit/{id}', name: 'form_edit')]
     public function edit(Article $article): Response
     {
         // $article = $this -> $articleRepository->findAll($article);
