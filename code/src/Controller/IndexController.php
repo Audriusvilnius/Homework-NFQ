@@ -13,12 +13,9 @@ class IndexController extends AbstractController
     #[Route('/', name: 'home')]
     public function list(ArticleRepository $articleRepository): Response
     {
-        //1680712726
-        $ss=$articleRepository->findAll();
-
-    
+        $articles=$articleRepository->findBy(array(), array('updateAt' => 'ASC'));
         return $this->render('pages/index.html.twig', [
-            'articles' => $ss,
+            'articles' => $articles,
         ]);
     }
 }
