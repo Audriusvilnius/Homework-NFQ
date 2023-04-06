@@ -16,6 +16,6 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerG2oXDla\App_KernelDevDebugContainer([
     'container.build_hash' => 'G2oXDla',
-    'container.build_id' => 'e379a947',
-    'container.build_time' => 1680753008,
+    'container.build_id' => '4ab924ed',
+    'container.build_time' => 1680771888,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerG2oXDla');

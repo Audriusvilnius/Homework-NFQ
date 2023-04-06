@@ -69,22 +69,31 @@ class __TwigTemplate_44c15d065e29987180cd226e8a4449f0 extends Template
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 9, $this->source); })()), "mins", [], "any", false, false, false, 9), "html", null, true);
         echo "
 \t\t\t\t\t\tminutes</p>
+\t\t\t\t\t";
+        // line 11
+        echo twig_escape_filter($this->env, (isset($context["srting"]) || array_key_exists("srting", $context) ? $context["srting"] : (function () { throw new RuntimeError('Variable "srting" does not exist.', 11, $this->source); })()), "html", null, true);
+        echo "
+
+\t\t\t\t\t";
+        // line 14
+        echo "
+
 \t\t\t\t</div>
 
 \t\t\t\t<img class=\"img-fluid\" src=\"";
-        // line 13
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 13, $this->source); })()), "image", [], "any", false, false, false, 13), "html", null, true);
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 18, $this->source); })()), "image", [], "any", false, false, false, 18), "html", null, true);
         echo "\" alt=\"\">
 
 \t\t\t\t<div class=\"lead mb-4 py-5\">";
-        // line 15
-        echo twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 15, $this->source); })()), "text", [], "any", false, false, false, 15);
+        // line 20
+        echo twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 20, $this->source); })()), "text", [], "any", false, false, false, 20);
         echo "</div>
 
 
 \t\t\t\t<div class=\"d-grid gap-2 d-sm-flex justify-content-sm-center\">
 \t\t\t\t\t<a href=\"";
-        // line 19
+        // line 24
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\" type=\"button\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Back</a>
 \t\t\t\t</div>
@@ -109,7 +118,7 @@ class __TwigTemplate_44c15d065e29987180cd226e8a4449f0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  88 => 19,  81 => 15,  76 => 13,  69 => 9,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  97 => 24,  90 => 20,  85 => 18,  79 => 14,  74 => 11,  69 => 9,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -124,6 +133,11 @@ class __TwigTemplate_44c15d065e29987180cd226e8a4449f0 extends Template
 \t\t\t\t\t<h1 class=\"fw-bold\">{{ article.title }}</h1>
 \t\t\t\t\t<p class=\"text-muted\">{{ article.mins }}
 \t\t\t\t\t\tminutes</p>
+\t\t\t\t\t{{ srting }}
+
+\t\t\t\t\t{# {{ stringCount }} #}
+
+
 \t\t\t\t</div>
 
 \t\t\t\t<img class=\"img-fluid\" src=\"{{ article.image }}\" alt=\"\">
