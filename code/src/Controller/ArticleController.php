@@ -68,6 +68,16 @@ class ArticleController extends AbstractController
         ]);
     }
 
+    #[Route('/article/delete/{id}',methods:['GET', 'DELETE'], name: 'article_delete')]
+    public function delete($id): Response
+    {
+        $article = $this->articleRepository->find($id);
+        $this->em->remove($article);
+        $this->em->flush();
+
+        return $this->redirectToRoute('home');
+    }
+
     #[Route('/article/{id}',methods:['GET'], name: 'article_view')]
     public function view($id): Response
     {   

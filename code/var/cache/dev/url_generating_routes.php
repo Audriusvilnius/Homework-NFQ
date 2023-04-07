@@ -5,6 +5,7 @@
 return [
     'home' => [[], ['_controller' => 'App\\Controller\\ArticleController::list'], [], [['text', '/']], [], [], []],
     'article_create' => [[], ['_controller' => 'App\\Controller\\ArticleController::create'], [], [['text', '/article/create']], [], [], []],
+    'article_delete' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/article/delete']], [], [], []],
     'article_view' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::view'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/article']], [], [], []],
     'article_edit' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/article/edit']], [], [], []],
     'article_update' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::update'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/article/update']], [], [], []],

@@ -15,18 +15,20 @@ return [
     [ // $regexpList
         0 => '{^(?'
                 .'|/article/(?'
-                    .'|([^/]++)(*:27)'
-                    .'|edit/([^/]++)(*:47)'
-                    .'|update/([^/]++)(*:69)'
+                    .'|delete/([^/]++)(*:34)'
+                    .'|([^/]++)(*:49)'
+                    .'|edit/([^/]++)(*:69)'
+                    .'|update/([^/]++)(*:91)'
                 .')'
-                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:105)'
+                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:127)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
-        27 => [[['_route' => 'article_view', '_controller' => 'App\\Controller\\ArticleController::view'], ['id'], ['GET' => 0], null, false, true, null]],
-        47 => [[['_route' => 'article_edit', '_controller' => 'App\\Controller\\ArticleController::edit'], ['id'], ['GET' => 0], null, false, true, null]],
-        69 => [[['_route' => 'article_update', '_controller' => 'App\\Controller\\ArticleController::update'], ['id'], null, null, false, true, null]],
-        105 => [
+        34 => [[['_route' => 'article_delete', '_controller' => 'App\\Controller\\ArticleController::delete'], ['id'], ['GET' => 0, 'DELETE' => 1], null, false, true, null]],
+        49 => [[['_route' => 'article_view', '_controller' => 'App\\Controller\\ArticleController::view'], ['id'], ['GET' => 0], null, false, true, null]],
+        69 => [[['_route' => 'article_edit', '_controller' => 'App\\Controller\\ArticleController::edit'], ['id'], ['GET' => 0], null, false, true, null]],
+        91 => [[['_route' => 'article_update', '_controller' => 'App\\Controller\\ArticleController::update'], ['id'], null, null, false, true, null]],
+        127 => [
             [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
