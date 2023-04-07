@@ -68,10 +68,16 @@ return [[
 '[C]App%5CController%5CArticleController%23__construct' => 1,
 'App%5CController%5CArticleController%23list' => 0,
 '[C]App%5CController%5CArticleController%23list' => 1,
-'App%5CController%5CArticleController%23view' => 0,
-'[C]App%5CController%5CArticleController%23view' => 1,
 'App%5CController%5CArticleController%23create' => 0,
 '[C]App%5CController%5CArticleController%23create' => 1,
+'App%5CController%5CArticleController%23view' => 0,
+'[C]App%5CController%5CArticleController%23view' => 1,
+'App%5CController%5CArticleController%23edit' => 0,
+'[C]App%5CController%5CArticleController%23edit' => 1,
+'App%5CController%5CArticleController%23update' => 0,
+'[C]App%5CController%5CArticleController%23update' => 1,
+'App%5CController%5CArticleController%24em' => 0,
+'[C]App%5CController%5CArticleController%24em' => 1,
 'App%5CController%5CArticleController%24articleRepository' => 0,
 '[C]App%5CController%5CArticleController%24articleRepository' => 1,
 'App%5CController%5CFormController' => 0,
@@ -580,6 +586,6 @@ return [[
 ], [
 
 0 => [],
-1 => 1680855014,
+1 => 1680888320,
 
 ]];

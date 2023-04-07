@@ -5,21 +5,26 @@ namespace App\Controller;
 use App\Entity\Article;
 use App\Form\ArticleFormType;
 use App\Repository\ArticleRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Common\Collections\Criteria;
 
 class ArticleController extends AbstractController
 {
+    private $em;
     private $articleRepository;
     
-    public function __construct(ArticleRepository $articleRepository)
+    public function __construct(ArticleRepository $articleRepository, EntityManagerInterface $em)
     {
        $this->articleRepository = $articleRepository;
+       $this->em = $em;
     }
 
-    #[Route('/', name: 'home')]
+    #[Route('/' , name: 'home')]
     public function list(): Response
     {
         return $this->render('pages/index.html.twig', [
@@ -27,10 +32,36 @@ class ArticleController extends AbstractController
         ]);
     }
     #[Route('/article/create', name: 'article_create')]
-    public function create(): Response
+    public function create(Request $request): Response
     {
         $article = new Article();
         $form = $this->createForm(ArticleFormType::class, $article);
+
+        $form -> handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $newArticle = $form->getData();
+
+            // $mins = $form->get('mins')->getData();
+            $image = $form->get('image')->getData();
+            if($image){
+                $newImageName = uniqid().'.'.$image->guessExtension();
+                try{
+                    $image->move(
+                        $this->getParameter('kernel.project_dir').'/public/images/uploads',
+                        $newImageName
+                    );
+                } catch (FileException $e){
+                    return new Response($e->getMessage());
+                }
+                
+                $newArticle->setImage('/images/uploads/'.$newImageName);
+            }
+            $this->em->persist($newArticle);
+            $this->em->flush();
+
+            return $this->redirectToRoute('home');
+        }
 
         return $this->render('pages/create.html.twig', [
             'form' => $form->createView()
@@ -67,8 +98,7 @@ class ArticleController extends AbstractController
     #[Route('/article/update/{id}', name: 'article_update')]
     public function update(Article $article): Response
     {
-        // $article = $this -> $articleRepository->findAll($article);
-        // $form = $this->createForm();
+
         return $this->render('pages/index.html.twig', [
             'articles' => $this->articleRepository->findBy([], ['updateAt' => 'DESC']),
         ]);

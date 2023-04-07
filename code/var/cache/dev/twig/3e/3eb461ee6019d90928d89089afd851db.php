@@ -70,7 +70,7 @@ class __TwigTemplate_3f42140e65e8e8fa5d52e6b303e7fb5f extends Template
 \t\t\t\t\t<a href=\"";
         // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_create");
-        echo "\" type=\"button\" class=\"btn btn-outline-info btn-lg px-4 gap-3\">Add Content</a>
+        echo "\" type=\"button\" class=\"btn btn-outline-info btn-lg px-4 gap-3\">ADD POST</a>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3\">
 \t\t\t\t\t";
@@ -154,7 +154,7 @@ $context["article"]]));
 \t\t<div class=\"py-5 bg-light\">
 \t\t\t<div class=\"container\">
 \t\t\t\t<div class=\"d-grid gap-2 d-sm-flex justify-content-sm-end mb-5\">
-\t\t\t\t\t<a href=\"{{ path('article_create') }}\" type=\"button\" class=\"btn btn-outline-info btn-lg px-4 gap-3\">Add Content</a>
+\t\t\t\t\t<a href=\"{{ path('article_create') }}\" type=\"button\" class=\"btn btn-outline-info btn-lg px-4 gap-3\">ADD POST</a>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3\">
 \t\t\t\t\t{% for article in articles %}

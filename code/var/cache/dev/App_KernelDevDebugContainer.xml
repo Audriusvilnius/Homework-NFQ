@@ -188,6 +188,7 @@
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <argument type="service" id="App\Repository\ArticleRepository"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\ArticleController"/>
       </call>
@@ -1713,6 +1714,11 @@
     </service>
     <service id="form.type_extension.submit.validator" class="Symfony\Component\Form\Extension\Validator\Type\SubmitTypeValidatorExtension">
       <tag name="form.type_extension" extended-type="Symfony\Component\Form\Extension\Core\Type\SubmitType"/>
+    </service>
+    <service id="mime_types" class="Symfony\Component\Mime\MimeTypes">
+      <call method="setDefault">
+        <argument type="service" id="mime_types"/>
+      </call>
     </service>
     <service id="twig" class="Twig\Environment" public="true">
       <tag name="container.preload" class="Twig\Cache\FilesystemCache"/>
@@ -3980,6 +3986,8 @@
     <service id="Symfony\Component\Form\FormFactoryInterface" alias="form.factory"/>
     <service id="form.property_accessor" alias="property_accessor"/>
     <service id="form.choice_list_factory" alias="form.choice_list_factory.cached"/>
+    <service id="Symfony\Component\Mime\MimeTypesInterface" alias="mime_types"/>
+    <service id="Symfony\Component\Mime\MimeTypeGuesserInterface" alias="mime_types"/>
     <service id="Twig_Environment" alias="twig"/>
     <service id="Twig\Environment" alias="twig"/>
     <service id="Doctrine\DBAL\Driver\Connection" alias="doctrine.dbal.default_connection"/>
