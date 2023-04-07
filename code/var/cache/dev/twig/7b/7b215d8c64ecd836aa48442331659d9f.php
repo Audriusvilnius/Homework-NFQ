@@ -48,7 +48,7 @@ class __TwigTemplate_a302f1c23e9be3d87fca376719528cda extends Template
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 4, $this->source); })()), "title", [], "any", false, false, false, 4), "html", null, true);
         echo "</h5>
 
-\t\t<p class=\"card-text\">
+\t\t<p class=\"card-text \">
 \t\t\t";
         // line 7
         $context["cutoff"] = 80;
@@ -112,7 +112,7 @@ class __TwigTemplate_a302f1c23e9be3d87fca376719528cda extends Template
 \t<div class=\"card-body\">
 \t\t<h5 class=\"card-title\">{{ article.title }}</h5>
 
-\t\t<p class=\"card-text\">
+\t\t<p class=\"card-text \">
 \t\t\t{% set cutoff = 80 %}
 \t\t\t{{ article.text|length > cutoff ? article.text|slice(0, cutoff) ~ '...' : article.text  }}
 \t\t</p>

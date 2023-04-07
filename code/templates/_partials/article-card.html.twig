@@ -3,7 +3,7 @@
 	<div class="card-body">
 		<h5 class="card-title">{{ article.title }}</h5>
 
-		<p class="card-text">
+		<p class="card-text ">
 			{% set cutoff = 80 %}
 			{{ article.text|length > cutoff ? article.text|slice(0, cutoff) ~ '...' : article.text  }}
 		</p>

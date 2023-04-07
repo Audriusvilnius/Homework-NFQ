@@ -93,12 +93,11 @@ class __TwigTemplate_3f42140e65e8e8fa5d52e6b303e7fb5f extends Template
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
             // line 19
             echo "\t\t\t\t\t\t<div class=\"col d-flex justify-content-md-between\">
-
 \t\t\t\t\t\t\t";
-            // line 21
-            $this->loadTemplate("_partials/article-card.html.twig", "pages/index.html.twig", 21)->display(twig_array_merge($context, ["article" =>             // line 22
+            // line 20
+            $this->loadTemplate("_partials/article-card.html.twig", "pages/index.html.twig", 20)->display(twig_array_merge($context, ["article" =>             // line 21
 $context["article"]]));
-            // line 24
+            // line 23
             echo "\t\t\t\t\t\t</div>
 \t\t\t\t\t";
             ++$context['loop']['index0'];
@@ -113,7 +112,7 @@ $context["article"]]));
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 26
+        // line 25
         echo "\t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
@@ -136,7 +135,7 @@ $context["article"]]));
 
     public function getDebugInfo()
     {
-        return array (  117 => 26,  102 => 24,  100 => 22,  99 => 21,  95 => 19,  78 => 18,  72 => 15,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  116 => 25,  101 => 23,  99 => 21,  98 => 20,  95 => 19,  78 => 18,  72 => 15,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -160,7 +159,6 @@ $context["article"]]));
 \t\t\t\t<div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3\">
 \t\t\t\t\t{% for article in articles %}
 \t\t\t\t\t\t<div class=\"col d-flex justify-content-md-between\">
-
 \t\t\t\t\t\t\t{% include '_partials/article-card.html.twig' with {
                                 article: article
                             } %}
