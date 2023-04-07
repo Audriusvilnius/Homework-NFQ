@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Article;
+use App\Form\ArticleFormType;
 use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,17 +19,28 @@ class ArticleController extends AbstractController
        $this->articleRepository = $articleRepository;
     }
 
-    #[Route('/',methods:['GET'], name: 'home')]
+    #[Route('/', name: 'home')]
     public function list(): Response
     {
         return $this->render('pages/index.html.twig', [
             'articles' => $this->articleRepository->findBy([], ['updateAt' => 'DESC']),
         ]);
     }
+    #[Route('/article/create', name: 'article_create')]
+    public function create(): Response
+    {
+        $article = new Article();
+        $form = $this->createForm(ArticleFormType::class, $article);
+
+        return $this->render('pages/create.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
 
     #[Route('/article/{id}',methods:['GET'], name: 'article_view')]
     public function view($id): Response
-    {
+    {   
+        $article = $this->articleRepository->find($id);
         $strCounts=str_word_count($this->articleRepository->find($id)->getText('text'), 1);
         $qty=0;
         foreach ($strCounts as $strCount) {
@@ -39,7 +51,7 @@ class ArticleController extends AbstractController
         $mins=gmdate("H:i:s", ($qty/200)*60);
 
         return $this->render('pages/view.html.twig', [
-            'article' => $this->articleRepository->find($id),
+            'article' => $article,
             'srtings'=>$mins,
         ]);
     }

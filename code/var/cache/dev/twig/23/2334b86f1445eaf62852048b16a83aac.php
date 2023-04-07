@@ -87,7 +87,7 @@ class __TwigTemplate_980b37c9dc9a95ea3575a61a856dbf9d extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!
+        echo "Home work!
 \t\t\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -165,7 +165,7 @@ class __TwigTemplate_980b37c9dc9a95ea3575a61a856dbf9d extends Template
 \t<head>
 \t\t<meta charset=\"UTF-8\">
 \t\t<title>
-\t\t\t{% block title %}Welcome!
+\t\t\t{% block title %}Home work!
 \t\t\t{% endblock %}
 \t\t</title>
 \t\t{% block stylesheets %}

@@ -377,10 +377,8 @@ class ComposerStaticInit2f1d61b4f9f2c7582ae8e7c0b0c24ad5
     );
 
     public static $classMap = array (
-        'App\\Controller\\EditController' => __DIR__ . '/../..' . '/src/Controller/EditController.php',
+        'App\\Controller\\ArticleController' => __DIR__ . '/../..' . '/src/Controller/ArticleController.php',
         'App\\Controller\\FormController' => __DIR__ . '/../..' . '/src/Controller/FormController.php',
-        'App\\Controller\\IndexController' => __DIR__ . '/../..' . '/src/Controller/IndexController.php',
-        'App\\Controller\\ViewController' => __DIR__ . '/../..' . '/src/Controller/ViewController.php',
         'App\\DataFixtures\\AppFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/AppFixtures.php',
         'App\\Entity\\Article' => __DIR__ . '/../..' . '/src/Entity/Article.php',
         'App\\Form\\BlogUpdateType' => __DIR__ . '/../..' . '/src/Form/BlogUpdateType.php',

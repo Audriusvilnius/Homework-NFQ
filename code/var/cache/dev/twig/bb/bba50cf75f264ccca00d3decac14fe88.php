@@ -126,7 +126,7 @@ class __TwigTemplate_065e2e3a304f9fdaa9419bc907d6ad05 extends Template
 \t\t\t<small class=\"text-muted\">
 \t\t\t\t{{ article.mins }}
 \t\t\t\tmins
-\t\t\t\t<h6 class=\"card-title\">{{ article.updateAt }}</h6>
+\t\t\t\t<h6 class=\"card-title\">{{ article.updateAt}}</h6>
 \t\t\t</small>
 \t\t</div>
 \t</div>

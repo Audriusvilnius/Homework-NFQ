@@ -25,7 +25,7 @@ class __TwigTemplate_d8550ea28b8a28b6a4dd248cd19ae7e9 extends Template
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
-            'main' => [$this, 'block_main'],
+            'body' => [$this, 'block_body'],
         ];
     }
 
@@ -49,11 +49,11 @@ class __TwigTemplate_d8550ea28b8a28b6a4dd248cd19ae7e9 extends Template
     }
 
     // line 3
-    public function block_main($context, array $blocks = [])
+    public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "\t<main>
@@ -69,13 +69,12 @@ class __TwigTemplate_d8550ea28b8a28b6a4dd248cd19ae7e9 extends Template
         // line 13
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 13, $this->source); })()), "title", [], "any", false, false, false, 13), "html", null, true);
         echo "\" class=\"form-control\" placeholder=\"Title leave a here...\">
-
 \t\t\t\t\t\t\t\t\t<h6 class=\"card-title mt-3\">Text:</h6>
 \t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" placeholder=\"Blog description leave a here...\" name=\"text_des\" rows=\"11\" cols=\"30\" value=\"";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "text", [], "any", false, false, false, 16), "html", null, true);
+        // line 15
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 15, $this->source); })()), "text", [], "any", false, false, false, 15), "html", null, true);
         echo "\">";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "text", [], "any", false, false, false, 16), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 15, $this->source); })()), "text", [], "any", false, false, false, 15), "html", null, true);
         echo "</textarea>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
@@ -84,21 +83,21 @@ class __TwigTemplate_d8550ea28b8a28b6a4dd248cd19ae7e9 extends Template
 \t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Photo change:</h6>
 \t\t\t\t\t\t\t\t\t<div class=\"position-relative\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-sm position-absolute top-0 start-100 translate-middle\" name=\"delete_photo\" value=\"1\">
-\t\t\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" fill=\"currentColor\" class=\"bi bi-x-circle bg-danger rounded-5\" viewbox=\"0 0 16 16\">
+\t\t\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"26\" height=\"26\" fill=\"currentColor\" class=\"bi bi-x-circle bg-danger rounded-5\" viewbox=\"0 0 16 16\">
 \t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/>
 \t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z\"/>
 \t\t\t\t\t\t\t\t\t\t\t</svg>
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t<img class=\"img-fluid rounded\" src=\"";
-        // line 29
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 29, $this->source); })()), "image", [], "any", false, false, false, 29), "html", null, true);
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 28, $this->source); })()), "image", [], "any", false, false, false, 28), "html", null, true);
         echo "\" alt=\"image\"></div>
 \t\t\t\t\t\t\t\t\t<input type=\"file\" class=\"form-control mt-3\" name=\"photo\">
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3\">
 \t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\" name=\"save\">Update</button>
 \t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 34
+        // line 33
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\" type=\"button\" class=\"btn btn-secondary\">Back</a>
 \t\t\t\t\t\t\t\t</div>
@@ -109,7 +108,7 @@ class __TwigTemplate_d8550ea28b8a28b6a4dd248cd19ae7e9 extends Template
 \t\t\t</div>
 \t\t</form>
 \t</div>
-</main>";
+</body>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -127,14 +126,14 @@ class __TwigTemplate_d8550ea28b8a28b6a4dd248cd19ae7e9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  102 => 34,  94 => 29,  76 => 16,  70 => 13,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  101 => 33,  93 => 28,  75 => 15,  70 => 13,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block main %}
+{% block body %}
 \t<main>
 \t\t<div class=\"py-5\">
 \t\t\t<div class=\"container\">
@@ -145,7 +144,6 @@ class __TwigTemplate_d8550ea28b8a28b6a4dd248cd19ae7e9 extends Template
 \t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Title:</h6>
 \t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"title_add\" value=\"{{article.title}}\" class=\"form-control\" placeholder=\"Title leave a here...\">
-
 \t\t\t\t\t\t\t\t\t<h6 class=\"card-title mt-3\">Text:</h6>
 \t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" placeholder=\"Blog description leave a here...\" name=\"text_des\" rows=\"11\" cols=\"30\" value=\"{{article.text}}\">{{article.text}}</textarea>
 \t\t\t\t\t\t\t\t</div>
@@ -155,7 +153,7 @@ class __TwigTemplate_d8550ea28b8a28b6a4dd248cd19ae7e9 extends Template
 \t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Photo change:</h6>
 \t\t\t\t\t\t\t\t\t<div class=\"position-relative\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-sm position-absolute top-0 start-100 translate-middle\" name=\"delete_photo\" value=\"1\">
-\t\t\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" fill=\"currentColor\" class=\"bi bi-x-circle bg-danger rounded-5\" viewbox=\"0 0 16 16\">
+\t\t\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"26\" height=\"26\" fill=\"currentColor\" class=\"bi bi-x-circle bg-danger rounded-5\" viewbox=\"0 0 16 16\">
 \t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/>
 \t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z\"/>
 \t\t\t\t\t\t\t\t\t\t\t</svg>
@@ -174,7 +172,7 @@ class __TwigTemplate_d8550ea28b8a28b6a4dd248cd19ae7e9 extends Template
 \t\t\t</div>
 \t\t</form>
 \t</div>
-</main>{% endblock %}
+</body>{% endblock %}
 ", "pages/edit.html.twig", "/Applications/XAMPP/xamppfiles/htdocs/homework-main/code/templates/pages/edit.html.twig");
     }
 }

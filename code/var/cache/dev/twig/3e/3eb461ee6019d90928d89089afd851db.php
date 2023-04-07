@@ -63,24 +63,21 @@ class __TwigTemplate_3f42140e65e8e8fa5d52e6b303e7fb5f extends Template
 \t\t\t</div>
 \t\t</div>
 \t</section>
-
 \t<main>
-
 \t\t<div class=\"py-5 bg-light\">
 \t\t\t<div class=\"container\">
 \t\t\t\t<div class=\"d-grid gap-2 d-sm-flex justify-content-sm-end mb-5\">
 \t\t\t\t\t<a href=\"";
-        // line 17
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("create_view");
         echo "\" type=\"button\" class=\"btn btn-outline-info btn-lg px-4 gap-3\">Add Content</a>
-
 
 \t\t\t\t</div>
 \t\t\t\t<div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3\">
 \t\t\t\t\t";
-        // line 22
+        // line 19
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 22, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 19, $this->source); })()));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -95,13 +92,13 @@ class __TwigTemplate_3f42140e65e8e8fa5d52e6b303e7fb5f extends Template
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 23
+            // line 20
             echo "\t\t\t\t\t\t<div class=\"col\">
 \t\t\t\t\t\t\t";
-            // line 24
-            $this->loadTemplate("_partials/article-card.html.twig", "pages/index.html.twig", 24)->display(twig_array_merge($context, ["article" =>             // line 25
+            // line 21
+            $this->loadTemplate("_partials/article-card.html.twig", "pages/index.html.twig", 21)->display(twig_array_merge($context, ["article" =>             // line 22
 $context["article"]]));
-            // line 27
+            // line 24
             echo "\t\t\t\t\t\t</div>
 \t\t\t\t\t";
             ++$context['loop']['index0'];
@@ -116,7 +113,7 @@ $context["article"]]));
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 26
         echo "\t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
@@ -139,7 +136,7 @@ $context["article"]]));
 
     public function getDebugInfo()
     {
-        return array (  120 => 29,  105 => 27,  103 => 25,  102 => 24,  99 => 23,  82 => 22,  74 => 17,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  117 => 26,  102 => 24,  100 => 22,  99 => 21,  96 => 20,  79 => 19,  72 => 15,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -154,14 +151,11 @@ $context["article"]]));
 \t\t\t</div>
 \t\t</div>
 \t</section>
-
 \t<main>
-
 \t\t<div class=\"py-5 bg-light\">
 \t\t\t<div class=\"container\">
 \t\t\t\t<div class=\"d-grid gap-2 d-sm-flex justify-content-sm-end mb-5\">
-\t\t\t\t\t<a href=\"{{ path('home') }}\" type=\"button\" class=\"btn btn-outline-info btn-lg px-4 gap-3\">Add Content</a>
-
+\t\t\t\t\t<a href=\"{{ path('create_view') }}\" type=\"button\" class=\"btn btn-outline-info btn-lg px-4 gap-3\">Add Content</a>
 
 \t\t\t\t</div>
 \t\t\t\t<div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3\">
