@@ -1,8 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+{% block main %}
+	<section class="py-5 text-center container">
+		<div class="row py-lg-5">
+			<div class="col-lg-6 col-md-8 mx-auto">
+				<h1 class="fw-bold">Edit content</h1>
+			</div>
+		</div>
+	</section>
 	<main>
-		<div class="py-5">
+		<div class="py-5 bg-light">
 			<div class="container">
 				<form method="post" enctype="multipart/form-data">
 					<div class="card mt-2" style="max-width: 1wm;">
@@ -29,8 +36,9 @@
 									<input type="file" class="form-control mt-3" name="photo">
 								</div>
 								<div class="list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3">
+									<a href="{{ path('home') }}" type="button" class="btn btn-secondary px-4">Back</a>
+
 									<button type="submit" class="btn btn-primary d-flex align-content-end px-4 gap-3" name="save">Update</button>
-									<a href="{{ path('home') }}" type="button" class="btn btn-secondary">Back</a>
 								</div>
 							</div>
 						</div>
@@ -38,5 +46,5 @@
 				</div>
 			</div>
 		</form>
-	</div>
-</body>{% endblock %}
+	</main>
+{% endblock %}
