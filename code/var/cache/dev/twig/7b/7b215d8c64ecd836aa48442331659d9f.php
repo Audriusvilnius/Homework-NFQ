@@ -66,7 +66,7 @@ class __TwigTemplate_a302f1c23e9be3d87fca376719528cda extends Template
         echo "\" class=\"btn btn-sm btn-outline-secondary\">View</a>
 \t\t\t\t<a href=\"";
         // line 14
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("form_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 14, $this->source); })()), "id", [], "any", false, false, false, 14)]), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 14, $this->source); })()), "id", [], "any", false, false, false, 14)]), "html", null, true);
         echo "\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
 \t\t\t</div>
 
@@ -76,9 +76,11 @@ class __TwigTemplate_a302f1c23e9be3d87fca376719528cda extends Template
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 18, $this->source); })()), "mins", [], "any", false, false, false, 18), "html", null, true);
         echo "
 \t\t\t\tmins
-\t\t\t\t";
-        // line 21
-        echo "\t\t\t</small>
+\t\t\t\t<h6 class=\"card-title\">";
+        // line 20
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 20, $this->source); })()), "updateAt", [], "any", false, false, false, 20), "html", null, true);
+        echo "</h6>
+\t\t\t</small>
 \t\t</div>
 \t</div>
 </div>
@@ -100,7 +102,7 @@ class __TwigTemplate_a302f1c23e9be3d87fca376719528cda extends Template
 
     public function getDebugInfo()
     {
-        return array (  81 => 21,  76 => 18,  69 => 14,  65 => 13,  56 => 8,  54 => 7,  48 => 4,  43 => 2,  40 => 1,);
+        return array (  81 => 20,  76 => 18,  69 => 14,  65 => 13,  56 => 8,  54 => 7,  48 => 4,  43 => 2,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -118,13 +120,13 @@ class __TwigTemplate_a302f1c23e9be3d87fca376719528cda extends Template
 \t\t<div class=\"d-flex justify-content-between align-items-center\">
 \t\t\t<div class=\"btn-group\">
 \t\t\t\t<a href=\"{{ path('article_view', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary\">View</a>
-\t\t\t\t<a href=\"{{ path('form_edit', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
+\t\t\t\t<a href=\"{{ path('article_edit', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
 \t\t\t</div>
 
 \t\t\t<small class=\"text-muted\">
 \t\t\t\t{{ article.mins }}
 \t\t\t\tmins
-\t\t\t\t{# <h6 class=\"card-title\">{{ article.updateAt}}</h6> #}
+\t\t\t\t<h6 class=\"card-title\">{{ article.updateAt}}</h6>
 \t\t\t</small>
 \t\t</div>
 \t</div>

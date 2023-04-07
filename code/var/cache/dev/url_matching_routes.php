@@ -8,20 +8,24 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
+        '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\ArticleController::list'], null, null, null, false, false, null]],
         '/form' => [[['_route' => 'app_form', '_controller' => 'App\\Controller\\FormController::index'], null, null, null, false, false, null]],
-        '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\IndexController::list'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
-                .'|/form/edit/([^/]++)(*:26)'
-                .'|/article/([^/]++)(*:50)'
-                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:85)'
+                .'|/article/(?'
+                    .'|([^/]++)(*:27)'
+                    .'|edit/([^/]++)(*:47)'
+                    .'|update/([^/]++)(*:69)'
+                .')'
+                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:105)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
-        26 => [[['_route' => 'form_edit', '_controller' => 'App\\Controller\\FormController::edit'], ['id'], null, null, false, true, null]],
-        50 => [[['_route' => 'article_view', '_controller' => 'App\\Controller\\ViewController::view'], ['id'], null, null, false, true, null]],
-        85 => [
+        27 => [[['_route' => 'article_view', '_controller' => 'App\\Controller\\ArticleController::view'], ['id'], null, null, false, true, null]],
+        47 => [[['_route' => 'article_edit', '_controller' => 'App\\Controller\\ArticleController::edit'], ['id'], null, null, false, true, null]],
+        69 => [[['_route' => 'article_update', '_controller' => 'App\\Controller\\ArticleController::update'], ['id'], null, null, false, true, null]],
+        105 => [
             [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

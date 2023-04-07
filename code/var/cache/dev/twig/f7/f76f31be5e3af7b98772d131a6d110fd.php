@@ -25,7 +25,7 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
-            'main' => [$this, 'block_main'],
+            'body' => [$this, 'block_body'],
         ];
     }
 
@@ -49,11 +49,11 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
     }
 
     // line 3
-    public function block_main($context, array $blocks = [])
+    public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "\t<main>
@@ -108,7 +108,7 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 \t\t\t</div>
 \t\t</form>
 \t</div>
-</main>";
+</body>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -133,7 +133,7 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block main %}
+{% block body %}
 \t<main>
 \t\t<div class=\"py-5\">
 \t\t\t<div class=\"container\">
@@ -172,7 +172,7 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 \t\t\t</div>
 \t\t</form>
 \t</div>
-</main>{% endblock %}
+</body>{% endblock %}
 ", "pages/edit.html.twig", "/code/templates/pages/edit.html.twig");
     }
 }

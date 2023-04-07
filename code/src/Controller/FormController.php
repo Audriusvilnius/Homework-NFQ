@@ -18,13 +18,21 @@ class FormController extends AbstractController
         ]);
     }
 
-    #[Route('/form/edit/{id}', name: 'form_edit')]
-    public function edit(Article $article): Response
-    {
-        // $article = $this -> $articleRepository->findAll($article);
-        // $form = $this->createForm();
-        return $this->render('form/edit.html.twig', [
-            'article' => $article,
-        ]);
-    }
+    // #[Route('/form/edit/{id}', name: 'form_edit')]
+    // public function edit(Article $article): Response
+    // {
+    //     return $this->render('form/edit.html.twig', [
+    //         'article' => $article,
+    //     ]);
+    // }
+
+    // #[Route('/form/update/{id}', name: 'form_update')]
+    // public function update(Article $article): Response
+    // {
+    //     // $article = $this -> $articleRepository->findAll($article);
+    //     // $form = $this->createForm();
+    //     return $this->render('pages/index.html.twig', [
+    //         'articles' => $articles,
+    //     ]);
+    // }
 }
