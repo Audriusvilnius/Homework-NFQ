@@ -83,7 +83,7 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 \t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Photo change:</h6>
 \t\t\t\t\t\t\t\t\t<div class=\"position-relative\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-sm position-absolute top-0 start-100 translate-middle\" name=\"delete_photo\" value=\"1\">
-\t\t\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" fill=\"currentColor\" class=\"bi bi-x-circle bg-danger rounded-5\" viewbox=\"0 0 16 16\">
+\t\t\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"26\" height=\"26\" fill=\"currentColor\" class=\"bi bi-x-circle bg-danger rounded-5\" viewbox=\"0 0 16 16\">
 \t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/>
 \t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z\"/>
 \t\t\t\t\t\t\t\t\t\t\t</svg>
@@ -153,7 +153,7 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 \t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Photo change:</h6>
 \t\t\t\t\t\t\t\t\t<div class=\"position-relative\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-sm position-absolute top-0 start-100 translate-middle\" name=\"delete_photo\" value=\"1\">
-\t\t\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" fill=\"currentColor\" class=\"bi bi-x-circle bg-danger rounded-5\" viewbox=\"0 0 16 16\">
+\t\t\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"26\" height=\"26\" fill=\"currentColor\" class=\"bi bi-x-circle bg-danger rounded-5\" viewbox=\"0 0 16 16\">
 \t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/>
 \t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z\"/>
 \t\t\t\t\t\t\t\t\t\t\t</svg>

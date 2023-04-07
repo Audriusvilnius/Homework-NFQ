@@ -15,6 +15,8 @@ class BlogUpdateType extends AbstractType
             ->add('title')
             ->add('text')
             ->add('image')
+            ->add('updateAt')
+            ->add('mins')
         ;
     }
 

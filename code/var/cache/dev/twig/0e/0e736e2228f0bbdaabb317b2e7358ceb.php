@@ -71,14 +71,14 @@ class __TwigTemplate_44c15d065e29987180cd226e8a4449f0 extends Template
             echo "\t\t\t\t\t\t<p class=\"text-muted\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 10, $this->source); })()), "mins", [], "any", false, false, false, 10), "html", null, true);
             echo "
-\t\t\t\t\t\t\tminutes
+\t\t\t\t\t\t\treading times
 \t\t\t\t\t\t";
         } else {
             // line 13
             echo "\t\t\t\t\t\t\t<p class=\"text-muted\">";
             echo twig_escape_filter($this->env, (isset($context["srtings"]) || array_key_exists("srtings", $context) ? $context["srtings"] : (function () { throw new RuntimeError('Variable "srtings" does not exist.', 13, $this->source); })()), "html", null, true);
             echo "
-\t\t\t\t\t\t\t\tminutes
+\t\t\t\t\t\t\t\treading times
 \t\t\t\t\t\t\t";
         }
         // line 16
@@ -134,10 +134,10 @@ class __TwigTemplate_44c15d065e29987180cd226e8a4449f0 extends Template
 \t\t\t\t\t<h1 class=\"fw-bold\">{{ article.title }}</h1>
 \t\t\t\t\t{% if ( article.mins != 0) %}
 \t\t\t\t\t\t<p class=\"text-muted\">{{ article.mins }}
-\t\t\t\t\t\t\tminutes
+\t\t\t\t\t\t\treading times
 \t\t\t\t\t\t{% else %}
 \t\t\t\t\t\t\t<p class=\"text-muted\">{{ srtings }}
-\t\t\t\t\t\t\t\tminutes
+\t\t\t\t\t\t\t\treading times
 \t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t</p>
 \t\t\t\t\t</div>

@@ -191,32 +191,11 @@
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\ArticleController"/>
       </call>
     </service>
-    <service id="App\Controller\EditController" class="App\Controller\EditController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\EditController"/>
-      </call>
-    </service>
     <service id="App\Controller\FormController" class="App\Controller\FormController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\FormController"/>
-      </call>
-    </service>
-    <service id="App\Controller\IndexController" class="App\Controller\IndexController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\IndexController"/>
-      </call>
-    </service>
-    <service id="App\Controller\ViewController" class="App\Controller\ViewController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\ViewController"/>
       </call>
     </service>
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
@@ -2805,18 +2784,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ArticleController" class="App\Controller\ArticleController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ArticleController" class="App\Controller\ArticleController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ArticleController" class="App\Controller\ArticleController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\EditController" class="App\Controller\EditController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\EditController" class="App\Controller\EditController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\EditController" class="App\Controller\EditController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FormController" class="App\Controller\FormController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FormController" class="App\Controller\FormController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\FormController" class="App\Controller\FormController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\IndexController" class="App\Controller\IndexController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\IndexController" class="App\Controller\IndexController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\IndexController" class="App\Controller\IndexController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ViewController" class="App\Controller\ViewController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ViewController" class="App\Controller\ViewController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\ViewController" class="App\Controller\ViewController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BlogUpdateType" class="App\Form\BlogUpdateType" autowire="true" abstract="true"/>
@@ -3294,27 +3264,9 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mx0UMmY" method="withContext"/>
     </service>
-    <service id=".service_locator.mx0UMmY.App\Controller\EditController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\EditController"/>
-      <argument>App\Controller\EditController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.mx0UMmY" method="withContext"/>
-    </service>
     <service id=".service_locator.mx0UMmY.App\Controller\FormController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\FormController"/>
       <argument>App\Controller\FormController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.mx0UMmY" method="withContext"/>
-    </service>
-    <service id=".service_locator.mx0UMmY.App\Controller\IndexController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\IndexController"/>
-      <argument>App\Controller\IndexController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.mx0UMmY" method="withContext"/>
-    </service>
-    <service id=".service_locator.mx0UMmY.App\Controller\ViewController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\ViewController"/>
-      <argument>App\Controller\ViewController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mx0UMmY" method="withContext"/>
     </service>
