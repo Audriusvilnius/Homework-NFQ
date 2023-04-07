@@ -11,19 +11,25 @@ use Doctrine\Common\Collections\Criteria;
 
 class ArticleController extends AbstractController
 {
-    #[Route('/', name: 'home')]
-    public function list(ArticleRepository $articleRepository): Response
+    private $articleRepository;
+    
+    public function __construct(ArticleRepository $articleRepository)
     {
-        $articles=$articleRepository->findBy([], ['updateAt' => 'DESC']);
+       $this->articleRepository = $articleRepository;
+    }
+
+    #[Route('/',methods:['GET'], name: 'home')]
+    public function list(): Response
+    {
         return $this->render('pages/index.html.twig', [
-            'articles' => $articles,
+            'articles' => $this->articleRepository->findBy([], ['updateAt' => 'DESC']),
         ]);
     }
 
-    #[Route('/article/{id}', name: 'article_view')]
-    public function view(Article $article): Response
+    #[Route('/article/{id}',methods:['GET'], name: 'article_view')]
+    public function view($id): Response
     {
-        $strCounts=str_word_count($article->getText('text'), 1);
+        $strCounts=str_word_count($this->articleRepository->find($id)->getText('text'), 1);
         $qty=0;
         foreach ($strCounts as $strCount) {
             if(strlen($strCount)>3) {
@@ -33,16 +39,16 @@ class ArticleController extends AbstractController
         $mins=gmdate("H:i:s", ($qty/200)*60);
 
         return $this->render('pages/view.html.twig', [
-            'article' => $article,
+            'article' => $this->articleRepository->find($id),
             'srtings'=>$mins,
         ]);
     }
     
-    #[Route('/article/edit/{id}', name: 'article_edit')]
-    public function edit(Article $article): Response
+    #[Route('/article/edit/{id}',methods:['GET'], name: 'article_edit')]
+    public function edit($id): Response
     {
         return $this->render('pages/edit.html.twig', [
-            'article' => $article,
+            'article' => $this->articleRepository->find($id),
         ]);
     }
 
@@ -52,7 +58,7 @@ class ArticleController extends AbstractController
         // $article = $this -> $articleRepository->findAll($article);
         // $form = $this->createForm();
         return $this->render('pages/index.html.twig', [
-            'articles' => $articles,
+            'articles' => $this->articleRepository->findBy([], ['updateAt' => 'DESC']),
         ]);
     }
 
