@@ -76,8 +76,6 @@ return [[
 '[C]App%5CController%5CArticleController%23view' => 1,
 'App%5CController%5CArticleController%23edit' => 0,
 '[C]App%5CController%5CArticleController%23edit' => 1,
-'App%5CController%5CArticleController%23update' => 0,
-'[C]App%5CController%5CArticleController%23update' => 1,
 'App%5CController%5CArticleController%24em' => 0,
 '[C]App%5CController%5CArticleController%24em' => 1,
 'App%5CController%5CArticleController%24articleRepository' => 0,
@@ -588,6 +586,6 @@ return [[
 ], [
 
 0 => [],
-1 => 1680935666,
+1 => 1680977988,
 
 ]];

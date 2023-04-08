@@ -104,7 +104,7 @@ class ArticleController extends AbstractController
     {
         $article = $this->articleRepository->find($id);
         $form = $this->createForm(ArticleFormType::class, $article);
-$SS='code'.$article->getImage();
+
         $form->handleRequest($request);
 
         $image = $form->get('image')->getData();
@@ -116,6 +116,7 @@ $SS='code'.$article->getImage();
                            {
                         $this->GetParameter('kernel.project_dir') . $article->getImage();
                         $newFileName = uniqid().'.'.$image->guessExtension();
+
 
                         try{
                             $image->move(

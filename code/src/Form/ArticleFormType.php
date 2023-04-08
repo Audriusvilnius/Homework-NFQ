@@ -22,7 +22,8 @@ class ArticleFormType extends AbstractType
                     'class' => 'form-control',
                     'placeholder' => 'Title leave a here...',
                 ),
-                'label'=> false 
+                'label'=> false,
+                'required' => false,
             ])
 
             ->add('text',TextareaType::class,[
@@ -30,9 +31,10 @@ class ArticleFormType extends AbstractType
                     'class' => 'form-control',
                     'placeholder' => 'Enter description leave a here...',
                     'rows'=>'11',
-                    'cols'=>'auto'
+                    'cols'=>'auto',
                 ),
-                'label'=> false 
+                'label'=> false,
+                'required' => false,
             ])
 
             ->add('image',FileType::class,array(
