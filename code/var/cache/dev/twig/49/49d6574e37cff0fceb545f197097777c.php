@@ -101,15 +101,15 @@ class __TwigTemplate_e1bdd4ce78b929b94ca43cbb9db1ef35 extends Template
 \t\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t\t<div class=\"list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3\">
-\t\t\t\t\t\t\t\t";
-        // line 37
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 37, $this->source); })()), 'widget');
-        echo "
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 38
+        // line 37
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\" type=\"button\" class=\"btn btn-secondary px-4\">Back</a>
-\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-success d-flex align-content-end px-4 gap-3\" name=\"save\">Create</button>
+\t\t\t\t\t\t\t\t";
+        // line 38
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 38, $this->source); })()), 'widget');
+        echo "
+\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-success d-flex align-content-end px-4 gap-3\">Create</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
@@ -180,9 +180,9 @@ class __TwigTemplate_e1bdd4ce78b929b94ca43cbb9db1ef35 extends Template
 \t\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t\t<div class=\"list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3\">
-\t\t\t\t\t\t\t\t{{ form_widget(form)}}
 \t\t\t\t\t\t\t\t<a href=\"{{ path('home') }}\" type=\"button\" class=\"btn btn-secondary px-4\">Back</a>
-\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-success d-flex align-content-end px-4 gap-3\" name=\"save\">Create</button>
+\t\t\t\t\t\t\t\t{{ form_widget(form)}}
+\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-success d-flex align-content-end px-4 gap-3\">Create</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>

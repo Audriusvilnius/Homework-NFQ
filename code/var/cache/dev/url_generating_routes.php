@@ -8,7 +8,6 @@ return [
     'article_delete' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/article/delete']], [], [], []],
     'article_view' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::view'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/article']], [], [], []],
     'article_edit' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/article/edit']], [], [], []],
-    'article_update' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::update'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/article/update']], [], [], []],
     'app_form' => [[], ['_controller' => 'App\\Controller\\FormController::index'], [], [['text', '/form']], [], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
 ];

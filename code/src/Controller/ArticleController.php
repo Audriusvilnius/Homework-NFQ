@@ -106,27 +106,29 @@ class ArticleController extends AbstractController
         $form = $this->createForm(ArticleFormType::class, $article);
 
         $form->handleRequest($request);
+
         $image = $form->get('image')->getData();
-        
+
         if ($form->isSubmitted() && $form->isValid()){
             if ($image){
                 if($article->getImage() !== null){
-                    if(file_exists(
-                    $this->getParameter('kernel.project_dir') . $article->getImage()
-                    )){
-                        $this->getParameter('kernel.project_dir') . $article->getImage();
-                        $newImageName = uniqid().'.'.$image->guessExtension();
+
+                    // if(file_exists($this->getParameter('kernel.project_dir') . $article->getImage()))
+                           {
+                        $this->GetParameter('kernel.project_dir') . $article->getImage();
+                        $newFileName = uniqid().'.'.$image->guessExtension();
 
                         try{
                             $image->move(
-                                $this->getParameter('kernel.project_dir').'/public/images/uploads',
-                                $newImageName
+                                $this->getParameter('kernel.project_dir') . '/public/images/uploads/',
+                                $newFileName
                             );
                         } catch (FileException $e){
                             return new Response($e->getMessage());
                         }
                         
-                        $article->setImage('/images/uploads' . $newImageName);
+                        $article->setImage('/images/uploads/'.$newFileName);
+                        
                         $this->em->flush();
                         return $this->redirectToRoute('home');
                     }
@@ -147,14 +149,4 @@ class ArticleController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-
-    #[Route('/article/update/{id}', name: 'article_update')]
-    public function update(Article $article): Response
-    {
-
-        return $this->render('pages/index.html.twig', [
-            'articles' => $this->articleRepository->findBy([], ['updateAt' => 'DESC']),
-        ]);
-    }
-
 }

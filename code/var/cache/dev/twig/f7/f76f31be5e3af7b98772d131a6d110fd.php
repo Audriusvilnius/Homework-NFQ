@@ -100,16 +100,16 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 \t\t\t\t\t\t\t\t\t<p>Choose image to upload (.jpg, .jpeg, .png)</p>
 \t\t\t\t\t\t\t\t</small>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t";
-        // line 33
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), 'widget');
-        echo "
 \t\t\t\t\t\t\t<div class=\"list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3\">
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 35
+        // line 34
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\" type=\"button\" class=\"btn btn-secondary px-4\">Back</a>
-\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\" name=\"save\">Update</button>
+\t\t\t\t\t\t\t\t";
+        // line 35
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 35, $this->source); })()), 'widget');
+        echo "
+\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\">Update</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
@@ -139,7 +139,7 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 
     public function getDebugInfo()
     {
-        return array (  121 => 43,  110 => 35,  105 => 33,  97 => 28,  92 => 26,  84 => 21,  79 => 19,  71 => 14,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  121 => 43,  110 => 35,  106 => 34,  97 => 28,  92 => 26,  84 => 21,  79 => 19,  71 => 14,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -176,10 +176,10 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 \t\t\t\t\t\t\t\t\t<p>Choose image to upload (.jpg, .jpeg, .png)</p>
 \t\t\t\t\t\t\t\t</small>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t{{ form_widget(form)}}
 \t\t\t\t\t\t\t<div class=\"list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3\">
 \t\t\t\t\t\t\t\t<a href=\"{{ path('home') }}\" type=\"button\" class=\"btn btn-secondary px-4\">Back</a>
-\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\" name=\"save\">Update</button>
+\t\t\t\t\t\t\t\t{{ form_widget(form)}}
+\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\">Update</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>

@@ -30,10 +30,10 @@
 									<p>Choose image to upload (.jpg, .jpeg, .png)</p>
 								</small>
 							</div>
-							{{ form_widget(form)}}
 							<div class="list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3">
 								<a href="{{ path('home') }}" type="button" class="btn btn-secondary px-4">Back</a>
-								<button type="submit" class="btn btn-primary d-flex align-content-end px-4 gap-3" name="save">Update</button>
+								{{ form_widget(form)}}
+								<button type="submit" class="btn btn-primary d-flex align-content-end px-4 gap-3">Update</button>
 							</div>
 						</div>
 					</div>
