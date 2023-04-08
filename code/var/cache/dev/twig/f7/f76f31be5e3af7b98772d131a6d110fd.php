@@ -66,55 +66,60 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 \t<main>
 \t\t<div class=\"py-5 bg-light\">
 \t\t\t<div class=\"container\">
-\t\t\t\t<form method=\"post\" enctype=\"multipart/form-data\">
-\t\t\t\t\t<div class=\"card mt-2\" style=\"max-width: 1wm;\">
-\t\t\t\t\t\t<div class=\"row g-0 shadow p-3 bg-body-tertiary rounded\">
-\t\t\t\t\t\t\t<div class=\"col-md-8\">
-\t\t\t\t\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Title:</h6>
-\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"title_add\" value=\"";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 20, $this->source); })()), "title", [], "any", false, false, false, 20), "html", null, true);
-        echo "\" class=\"form-control\" placeholder=\"Title leave a here...\">
-\t\t\t\t\t\t\t\t\t<h6 class=\"card-title mt-3\">Text:</h6>
-\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" placeholder=\"Blog description leave a here...\" name=\"text_des\" rows=\"11\" cols=\"30\" value=\"";
-        // line 22
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 22, $this->source); })()), "text", [], "any", false, false, false, 22), "html", null, true);
-        echo "\">";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 22, $this->source); })()), "text", [], "any", false, false, false, 22), "html", null, true);
-        echo "</textarea>
-\t\t\t\t\t\t\t\t</div>
+\t\t\t\t";
+        // line 14
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), 'form_start');
+        echo "
+\t\t\t\t<div class=\"card mt-2\" style=\"max-width: 1wm;\">
+\t\t\t\t\t<div class=\"row g-0 shadow p-3 bg-body-tertiary rounded\">
+\t\t\t\t\t\t<div class=\"col-md-8\">
+\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t";
+        // line 19
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), "title", [], "any", false, false, false, 19), 'widget');
+        echo "
+\t\t\t\t\t\t\t\t<div class=\"card-title mt-3\"></div>
+\t\t\t\t\t\t\t\t";
+        // line 21
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), "text", [], "any", false, false, false, 21), 'widget');
+        echo "
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"col-md-4\">
-\t\t\t\t\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Photo change:</h6>
-\t\t\t\t\t\t\t\t\t<div class=\"position-relative\">
-\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-sm position-absolute top-0 start-100 translate-middle\" name=\"delete_photo\" value=\"1\">
-\t\t\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"26\" height=\"26\" fill=\"currentColor\" class=\"bi bi-x-circle bg-danger rounded-5\" viewbox=\"0 0 16 16\">
-\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/>
-\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z\"/>
-\t\t\t\t\t\t\t\t\t\t\t</svg>
-\t\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t\t\t<img class=\"img-fluid rounded\" src=\"";
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t<img class=\"img-fluid rounded\" src=\"";
+        // line 26
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 26, $this->source); })()), "image", [], "any", false, false, false, 26), "html", null, true);
+        echo "\" alt=\"image\">
+\t\t\t\t\t\t\t\t<div class=\"card-title mt-3\"></div>
+\t\t\t\t\t\t\t\t";
+        // line 28
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), "image", [], "any", false, false, false, 28), 'widget');
+        echo "
+\t\t\t\t\t\t\t\t<small>
+\t\t\t\t\t\t\t\t\t<p>Choose image to upload (.jpg, .jpeg, .png)</p>
+\t\t\t\t\t\t\t\t</small>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+        // line 33
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), 'widget');
+        echo "
+\t\t\t\t\t\t\t<div class=\"list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3\">
+\t\t\t\t\t\t\t\t<a href=\"";
         // line 35
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 35, $this->source); })()), "image", [], "any", false, false, false, 35), "html", null, true);
-        echo "\" alt=\"image\"></div>
-\t\t\t\t\t\t\t\t\t<input type=\"file\" class=\"form-control mt-3\" name=\"photo\">
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3\">
-\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 39
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\" type=\"button\" class=\"btn btn-secondary px-4\">Back</a>
-
-\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\" name=\"save\">Update</button>
-\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\" name=\"save\">Update</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
-\t\t</form>
+\t\t</div>
+\t\t";
+        // line 43
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), 'form_end');
+        echo "
 \t</main>
 ";
         
@@ -134,7 +139,7 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 
     public function getDebugInfo()
     {
-        return array (  107 => 39,  100 => 35,  82 => 22,  77 => 20,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  121 => 43,  110 => 35,  105 => 33,  97 => 28,  92 => 26,  84 => 21,  79 => 19,  71 => 14,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -152,41 +157,36 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 \t<main>
 \t\t<div class=\"py-5 bg-light\">
 \t\t\t<div class=\"container\">
-\t\t\t\t<form method=\"post\" enctype=\"multipart/form-data\">
-\t\t\t\t\t<div class=\"card mt-2\" style=\"max-width: 1wm;\">
-\t\t\t\t\t\t<div class=\"row g-0 shadow p-3 bg-body-tertiary rounded\">
-\t\t\t\t\t\t\t<div class=\"col-md-8\">
-\t\t\t\t\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Title:</h6>
-\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"title_add\" value=\"{{article.title}}\" class=\"form-control\" placeholder=\"Title leave a here...\">
-\t\t\t\t\t\t\t\t\t<h6 class=\"card-title mt-3\">Text:</h6>
-\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" placeholder=\"Blog description leave a here...\" name=\"text_des\" rows=\"11\" cols=\"30\" value=\"{{article.text}}\">{{article.text}}</textarea>
-\t\t\t\t\t\t\t\t</div>
+\t\t\t\t{{form_start(form)}}
+\t\t\t\t<div class=\"card mt-2\" style=\"max-width: 1wm;\">
+\t\t\t\t\t<div class=\"row g-0 shadow p-3 bg-body-tertiary rounded\">
+\t\t\t\t\t\t<div class=\"col-md-8\">
+\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t{{ form_widget(form.title)}}
+\t\t\t\t\t\t\t\t<div class=\"card-title mt-3\"></div>
+\t\t\t\t\t\t\t\t{{ form_widget(form.text)}}
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"col-md-4\">
-\t\t\t\t\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t\t\t\t\t<h6 class=\"card-title\">Photo change:</h6>
-\t\t\t\t\t\t\t\t\t<div class=\"position-relative\">
-\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-sm position-absolute top-0 start-100 translate-middle\" name=\"delete_photo\" value=\"1\">
-\t\t\t\t\t\t\t\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"26\" height=\"26\" fill=\"currentColor\" class=\"bi bi-x-circle bg-danger rounded-5\" viewbox=\"0 0 16 16\">
-\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/>
-\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z\"/>
-\t\t\t\t\t\t\t\t\t\t\t</svg>
-\t\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t\t\t<img class=\"img-fluid rounded\" src=\"{{ article.image }}\" alt=\"image\"></div>
-\t\t\t\t\t\t\t\t\t<input type=\"file\" class=\"form-control mt-3\" name=\"photo\">
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3\">
-\t\t\t\t\t\t\t\t\t<a href=\"{{ path('home') }}\" type=\"button\" class=\"btn btn-secondary px-4\">Back</a>
-
-\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\" name=\"save\">Update</button>
-\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t<img class=\"img-fluid rounded\" src=\"{{ article.image }}\" alt=\"image\">
+\t\t\t\t\t\t\t\t<div class=\"card-title mt-3\"></div>
+\t\t\t\t\t\t\t\t{{ form_widget(form.image)}}
+\t\t\t\t\t\t\t\t<small>
+\t\t\t\t\t\t\t\t\t<p>Choose image to upload (.jpg, .jpeg, .png)</p>
+\t\t\t\t\t\t\t\t</small>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t{{ form_widget(form)}}
+\t\t\t\t\t\t\t<div class=\"list-table d-flex d-grid gap-2 d-sm-flex justify-content-sm-end me-3\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path('home') }}\" type=\"button\" class=\"btn btn-secondary px-4\">Back</a>
+\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary d-flex align-content-end px-4 gap-3\" name=\"save\">Update</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
-\t\t</form>
+\t\t</div>
+\t\t{{form_end(form)}}
 \t</main>
 {% endblock %}
 ", "pages/edit.html.twig", "/code/templates/pages/edit.html.twig");

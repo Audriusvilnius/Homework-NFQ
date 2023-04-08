@@ -42,7 +42,9 @@ class ArticleController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $newArticle = $form->getData();
 
-            // $mins = $form->get('mins')->getData();
+            $mins = $form->get('mins')->getData();
+
+
             $image = $form->get('image')->getData();
             if($image){
                 $newImageName = uniqid().'.'.$image->guessExtension();
@@ -97,11 +99,32 @@ class ArticleController extends AbstractController
         ]);
     }
     
-    #[Route('/article/edit/{id}',methods:['GET'], name: 'article_edit')]
-    public function edit($id): Response
+    #[Route('/article/edit/{id}', name: 'article_edit')]
+    public function edit($id, Request $request): Response
     {
+        $article = $this->articleRepository->find($id);
+        $form = $this->createForm(ArticleFormType::class, $article);
+
+        $form->handleRequest($request);
+        $image = $form->get('image')->getData();
+        if ($form->isSubmitted() && $form->isValid()){
+            if ($image){
+
+            }else{
+                $article->setTitle($form->get('title')->getData());
+                $article->setText($form->get('text')->getData());
+                $article->setUpdateAt($form->get('updateAt')->getData());
+                $article->setMins($form->get('mins')->getData());
+
+                $this->em->flush();
+                return $this->redirectToRoute('home');
+            }
+        }
+
+
         return $this->render('pages/edit.html.twig', [
-            'article' => $this->articleRepository->find($id),
+            'article' => $article,
+            'form' => $form->createView(),
         ]);
     }
 
@@ -113,12 +136,5 @@ class ArticleController extends AbstractController
             'articles' => $this->articleRepository->findBy([], ['updateAt' => 'DESC']),
         ]);
     }
-
-
-
-
-
-
-
 
 }

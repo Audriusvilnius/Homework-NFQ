@@ -35,13 +35,19 @@ class ArticleFormType extends AbstractType
                 'label'=> false 
             ])
 
-            ->add('image',FileType::class,[
-                'attr' => array(
-                    'class' => 'form-control',
-                    'accept' => '.jpg, .jpeg, .png'
-                ),
-                'label'=> false 
-            ])
+            // ->add('image',FileType::class,[
+            //     'attr' => array(
+            //         'class' => 'form-control',
+            //         'accept' => '.jpg, .jpeg, .png'
+            //     ),
+            //     'label'=> false 
+            // ])
+
+            ->add('image',FileType::class,array(
+                'mapped' =>false,
+                'required' => false,
+                'label'=> false,
+            ))
 
             ->add('updateAt', HiddenType::class,[
                 'data' => time(),
