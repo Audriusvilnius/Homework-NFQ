@@ -42,7 +42,18 @@ class ArticleController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $newArticle = $form->getData();
 
-            $mins = $form->get('mins')->getData();
+            // $mins = $form->get('mins')->getData();
+            $text = $form->get('text')->getData();
+
+            $strCounts=str_word_count($text, 1);
+            $qty=0;
+            foreach ($strCounts as $strCount) {
+                if(strlen($strCount)>3) {
+                    $qty++;
+                };
+            }
+            $mins=gmdate("i:s", ($qty/200)*60);
+            dump($mins);
 
 
             $image = $form->get('image')->getData();
@@ -60,6 +71,8 @@ class ArticleController extends AbstractController
                 $newArticle->setImage('/images/uploads/'.$newImageName);
             }
             $this->em->persist($newArticle);
+            $this->em->flush();
+            $article->setMins($mins);
             $this->em->flush();
 
             return $this->redirectToRoute('home');
@@ -116,8 +129,6 @@ class ArticleController extends AbstractController
                            {
                         $this->GetParameter('kernel.project_dir') . $article->getImage();
                         $newFileName = uniqid().'.'.$image->guessExtension();
-
-
                         try{
                             $image->move(
                                 $this->getParameter('kernel.project_dir') . '/public/images/uploads/',

@@ -20,7 +20,7 @@ final class Version20230406034841 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE article ADD COLUMN mins INTEGER DEFAULT NULL');
+        $this->addSql('ALTER TABLE article ADD COLUMN mins VARCHAR(255) DEFAULT NOT NULL');
     }
 
     public function down(Schema $schema): void

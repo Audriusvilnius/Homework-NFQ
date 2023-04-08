@@ -28,8 +28,9 @@ class Article
     #[ORM\Column(type: Types::BIGINT, nullable: true)]
     private ?string $updateAt = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?int $mins = null;
+    #[ORM\Column(length: 255)]
+    // #[ORM\Column(nullable: true)]
+    private ?string $mins = null;
 
     public function getId(): ?int
     {
@@ -84,12 +85,23 @@ class Article
         return $this;
     }
 
-    public function getMins(): ?int
+    // public function getMins(): ?int
+    // {
+    //     return $this->mins;
+    // }
+
+    // public function setMins(?int $mins): self
+    // {
+    //     $this->mins = $mins;
+
+    //     return $this;
+    // }
+    public function getMins(): ?string
     {
         return $this->mins;
     }
 
-    public function setMins(?int $mins): self
+    public function setMins(?string $mins): self
     {
         $this->mins = $mins;
 
