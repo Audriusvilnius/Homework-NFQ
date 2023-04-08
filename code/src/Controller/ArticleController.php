@@ -107,9 +107,30 @@ class ArticleController extends AbstractController
 
         $form->handleRequest($request);
         $image = $form->get('image')->getData();
+        
         if ($form->isSubmitted() && $form->isValid()){
             if ($image){
+                if($article->getImage() !== null){
+                    if(file_exists(
+                    $this->getParameter('kernel.project_dir') . $article->getImage()
+                    )){
+                        $this->getParameter('kernel.project_dir') . $article->getImage();
+                        $newImageName = uniqid().'.'.$image->guessExtension();
 
+                        try{
+                            $image->move(
+                                $this->getParameter('kernel.project_dir').'/public/images/uploads',
+                                $newImageName
+                            );
+                        } catch (FileException $e){
+                            return new Response($e->getMessage());
+                        }
+                        
+                        $article->setImage('/images/uploads' . $newImageName);
+                        $this->em->flush();
+                        return $this->redirectToRoute('home');
+                    }
+                }
             }else{
                 $article->setTitle($form->get('title')->getData());
                 $article->setText($form->get('text')->getData());
@@ -120,7 +141,6 @@ class ArticleController extends AbstractController
                 return $this->redirectToRoute('home');
             }
         }
-
 
         return $this->render('pages/edit.html.twig', [
             'article' => $article,
