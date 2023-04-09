@@ -41,8 +41,6 @@ class ArticleController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $newArticle = $form->getData();
-
-            // $mins = $form->get('mins')->getData();
             $text = $form->get('text')->getData();
 
             $strCounts=str_word_count($text, 1);
@@ -52,9 +50,11 @@ class ArticleController extends AbstractController
                     $qty++;
                 };
             }
+        if($qty < 3600){
             $mins=gmdate("i:s", ($qty/200)*60);
-            dump($mins);
-
+        }else{
+            $mins=gmdate("H:i:s", ($qty/200)*60);
+        }
 
             $image = $form->get('image')->getData();
             if($image){
@@ -87,6 +87,10 @@ class ArticleController extends AbstractController
     public function delete($id): Response
     {
         $article = $this->articleRepository->find($id);
+
+        $delFile=$article->getImage('image');
+        unlink($this->getParameter('kernel.project_dir').'/public'.$delFile);
+
         $this->em->remove($article);
         $this->em->flush();
 
@@ -96,19 +100,8 @@ class ArticleController extends AbstractController
     #[Route('/article/{id}',methods:['GET'], name: 'article_view')]
     public function view($id): Response
     {   
-        $article = $this->articleRepository->find($id);
-        $strCounts=str_word_count($this->articleRepository->find($id)->getText('text'), 1);
-        $qty=0;
-        foreach ($strCounts as $strCount) {
-            if(strlen($strCount)>3) {
-                $qty++;
-            };
-        }
-        $mins=gmdate("H:i:s", ($qty/200)*60);
-
         return $this->render('pages/view.html.twig', [
-            'article' => $article,
-            'srtings'=>$mins,
+            'article' => $this->articleRepository->find($id),
         ]);
     }
     
@@ -117,38 +110,47 @@ class ArticleController extends AbstractController
     {
         $article = $this->articleRepository->find($id);
         $form = $this->createForm(ArticleFormType::class, $article);
-
         $form->handleRequest($request);
 
         $image = $form->get('image')->getData();
+        $text = $form->get('text')->getData();
+        $strCounts=str_word_count($text, 1);
+        $qty=0;
+        foreach ($strCounts as $strCount) {
+            if(strlen($strCount)>3) {
+                $qty++;
+            };
+        }
+        if($qty < 3600){
+            $mins=gmdate("i:s", ($qty/200)*60);
+        }else{
+            $mins=gmdate("H:i:s", ($qty/200)*60);
+        }
 
         if ($form->isSubmitted() && $form->isValid()){
             if ($image){
                 if($article->getImage() !== null){
-                    // if(file_exists($this->getParameter('kernel.project_dir').$article->getImage()))
-                           {
-                        $this->GetParameter('kernel.project_dir') . $article->getImage();
-                        $newFileName = uniqid().'.'.$image->guessExtension();
-                        try{
-                            $image->move(
-                                $this->getParameter('kernel.project_dir') . '/public/images/uploads/',
-                                $newFileName
-                            );
+                    $delFile=$article->getImage('image');
+                    unlink($this->getParameter('kernel.project_dir').'/public'.$delFile);
+
+                    $this->GetParameter('kernel.project_dir') . $article->getImage();
+                    $newFileName = uniqid().'.'.$image->guessExtension();
+                    try{
+                        $image->move(
+                            $this->getParameter('kernel.project_dir') . '/public/images/uploads/',$newFileName);
                         } catch (FileException $e){
                             return new Response($e->getMessage());
                         }
-                        
                         $article->setImage('/images/uploads/'.$newFileName);
                         
                         $this->em->flush();
                         return $this->redirectToRoute('home');
-                    }
                 }
             }else{
                 $article->setTitle($form->get('title')->getData());
                 $article->setText($form->get('text')->getData());
                 $article->setUpdateAt($form->get('updateAt')->getData());
-                $article->setMins($form->get('mins')->getData());
+                $article->setMins($mins);
 
                 $this->em->flush();
                 return $this->redirectToRoute('home');

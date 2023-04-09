@@ -23,7 +23,8 @@ class ArticleFormType extends AbstractType
                     'placeholder' => 'Title leave a here...',
                 ),
                 'label'=> false,
-                'required' => false,
+                // 'required' => false,
+                'required' => true,
             ])
 
             ->add('text',TextareaType::class,[
@@ -34,20 +35,23 @@ class ArticleFormType extends AbstractType
                     'cols'=>'auto',
                 ),
                 'label'=> false,
-                'required' => false,
+                // 'required' => false,
+                'required' => true,
+
             ])
 
             ->add('image',FileType::class,array(
                 'mapped' =>false,
                 'required' => false,
-            ))
+                // 'required' => true,
 
+            ))
             ->add('updateAt', HiddenType::class,[
                 'data' => time(),
             ])
 
             ->add('mins',HiddenType::class,[
-                'data' => 0,
+                'data' => '0',
             ])
         ;
     }

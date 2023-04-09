@@ -5,7 +5,7 @@ namespace App\Entity;
 use App\Repository\ArticleRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-// use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
@@ -17,18 +17,23 @@ class Article
     private ?int $id = null;
     
     #[ORM\Column(length: 255)]
+    // #[Assert\NotBlank]
     private ?string $title = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    // #[Assert\NotBlank]
     private ?string $text = null;
 
     #[ORM\Column(length: 255)]
+    // #[Assert\NotBlank]
     private ?string $image = null;
 
     #[ORM\Column(type: Types::BIGINT, nullable: true)]
+
     private ?string $updateAt = null;
 
     #[ORM\Column(length: 255)]
+
     // #[ORM\Column(nullable: true)]
     private ?string $mins = null;
 
@@ -85,17 +90,6 @@ class Article
         return $this;
     }
 
-    // public function getMins(): ?int
-    // {
-    //     return $this->mins;
-    // }
-
-    // public function setMins(?int $mins): self
-    // {
-    //     $this->mins = $mins;
-
-    //     return $this;
-    // }
     public function getMins(): ?string
     {
         return $this->mins;
@@ -107,5 +101,16 @@ class Article
 
         return $this;
     }
+    
+    // public function getMins(): ?int
+    // {
+    //     return $this->mins;
+    // }
 
+    // public function setMins(?int $mins): self
+    // {
+    //     $this->mins = $mins;
+
+    //     return $this;
+    // }
 }
