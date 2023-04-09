@@ -13,22 +13,16 @@
 		<div class="bg-light">
 			<div class="container">
 				<div class="py-5 text-center">
-					{% if ( article.mins != 0) %}
-						<p class="text-muted">{{ article.mins }}
-							reading times
-						{% else %}
-							<p class="text-muted">{{ srtings }}
-								reading times
-							{% endif %}
-						</p>
-					</div>
-					<img class="img-fluid" src="{{ article.image }}" alt="image">
-					<div class="lead mb-4 py-5 text-justify">{{ article.text | raw }}</div>
-					<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-						<a href="{{ path('home') }}" type="button" class="btn btn-secondary btn-lg px-4 gap-3">Back</a>
-					</div>
+					<p class="text-muted">{{ article.mins }}
+						reading times
+					</p>
+				</div>
+				<img class="img-fluid" src="{{ article.image }}" alt="image">
+				<div class="lead mb-4 py-5 text-justify">{{ article.text | raw }}</div>
+				<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+					<a href="{{ path('home') }}" type="button" class="btn btn-secondary btn-lg px-4 gap-3">Back</a>
 				</div>
 			</div>
 		</div>
-	</main>
-{% endblock %}
+	</div>
+</main>{% endblock %}

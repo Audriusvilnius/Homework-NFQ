@@ -89,7 +89,9 @@ class ArticleController extends AbstractController
         $article = $this->articleRepository->find($id);
 
         $delFile=$article->getImage('image');
-        unlink($this->getParameter('kernel.project_dir').'/public'.$delFile);
+        if(is_file($this->getParameter('kernel.project_dir').'/public'.$delFile)){
+            unlink($this->getParameter('kernel.project_dir').'/public'.$delFile);
+        };
 
         $this->em->remove($article);
         $this->em->flush();
@@ -131,7 +133,9 @@ class ArticleController extends AbstractController
             if ($image){
                 if($article->getImage() !== null){
                     $delFile=$article->getImage('image');
-                    unlink($this->getParameter('kernel.project_dir').'/public'.$delFile);
+                    if(is_file($this->getParameter('kernel.project_dir').'/public'.$delFile)){
+                        unlink($this->getParameter('kernel.project_dir').'/public'.$delFile);
+                    };
 
                     $this->GetParameter('kernel.project_dir') . $article->getImage();
                     $newFileName = uniqid().'.'.$image->guessExtension();
