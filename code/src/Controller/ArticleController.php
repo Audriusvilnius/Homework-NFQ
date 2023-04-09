@@ -57,6 +57,10 @@ class ArticleController extends AbstractController
         }
 
             $image = $form->get('image')->getData();
+            if( $form->get('image')->getData() == null){
+                // reik sutvarkyt tuscia forma
+            }
+
             if($image){
                 $newImageName = uniqid().'.'.$image->guessExtension();
                 try{
@@ -67,8 +71,9 @@ class ArticleController extends AbstractController
                 } catch (FileException $e){
                     return new Response($e->getMessage());
                 }
-                
+
                 $newArticle->setImage('/images/uploads/'.$newImageName);
+                
             }
             $this->em->persist($newArticle);
             $this->em->flush();
@@ -123,7 +128,8 @@ class ArticleController extends AbstractController
                 $qty++;
             };
         }
-        if($qty < 3600){
+
+        if($qty < 12000){
             $mins=gmdate("i:s", ($qty/200)*60);
         }else{
             $mins=gmdate("H:i:s", ($qty/200)*60);
