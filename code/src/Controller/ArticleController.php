@@ -58,7 +58,13 @@ class ArticleController extends AbstractController
 
             $image = $form->get('image')->getData();
             if( $form->get('image')->getData() == null){
-                // reik sutvarkyt tuscia forma
+                
+            $this->em->persist($newArticle);
+            $article->setMins($mins);
+            $article->setImage('https://cdn.pixabay.com/photo/2021/08/21/08/09/ban-6562104_1280.png');
+            $this->em->flush();
+
+            return $this->redirectToRoute('home');
             }
 
             if($image){
